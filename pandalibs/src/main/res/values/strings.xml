@@ -1,0 +1,661 @@
+<resources>
+    <string name="app_name">熊猫</string>
+    <string name="things">事事</string>
+    <string name="nav_back_again_finish">再按一次退出程序</string>
+    <string name="vbnb_default_first_str">消息</string>
+    <string name="vbnb_default_second_str">通讯录</string>
+    <string name="vbnb_default_four_str">应用</string>
+    <string name="vbnb_default_fifth_str">我的</string>
+    <string name="jump_str">跳过</string>
+
+    <string name="login_topwd_str">手机号登录</string>
+    <string name="login_check_str">验证码登录</string>
+    <string name="login_name_hint_str">请输入手机号</string>
+    <string name="login_pwd_hint_str">请输入密码</string>
+    <string name="login_str">登录</string>
+    <string name="login_new_register_str">新用户注册</string>
+    <string name="login_forget_pwd_str">忘记密码</string>
+    <string name="check_str">验证码</string>
+    <string name="get_check_code_str">获取验证码</string>
+    <string name="login_input_name_str">请输入用户名</string>
+    <string name="login_input_pwd_str">请输入密码</string>
+    <string name="login_input_check_str">请输入验证码</string>
+    <string name="kick_by_other_client_content_str">您的账号被其他人登录，请重新登录并修改密码。</string>
+    <string name="kick_by_other_client_title_str">下线通知</string>
+    <string name="login_fail_str">登录失败</string>
+    <string name="time_moment_str">刚刚</string>
+    <string name="time_min_ago_str">分钟前</string>
+    <string name="time_hour_ago_str">小时前</string>
+    <string name="yestday_str">昨天</string>
+    <string name="thisweek_st">本周内</string>
+    <string name="lastweek_st">一周前</string>
+    <string name="yestday_2_str">昨天 %1$s</string>
+    <string name="sign_read_str">标记已读</string>
+    <string name="sign_unread_str">标记未读</string>
+    <string name="to_top_cancel_str">取消置顶</string>
+    <string name="to_top_str">置顶聊天</string>
+    <string name="del_chat_str">删除该聊天</string>
+    <string name="send_str">发送</string>
+    <string name="ensure_str">确定</string>
+    <string name="rename_str">重命名</string>
+    <string name="delete_str">删除</string>
+    <string name="share_str">分享</string>
+    <string name="save_work_str">保存工作表</string>
+    <string name="star_file_str">星标文件</string>
+    <string name="star_str">星标</string>
+    <string name="star_cancel_str">取消星标</string>
+    <string name="file_pic_title_str">图片</string>
+    <string name="file_audio_title_str">音频</string>
+    <string name="file_video_title_str">视频</string>
+    <string name="file_txt_title_str">TXT</string>
+    <string name="file_excel_title_str">EXCEL</string>
+    <string name="file_ppt_title_str">PPT</string>
+    <string name="file_word_title_str">WORD</string>
+    <string name="file_pdf_title_str">PDF</string>
+    <string name="file_zip_title_str">压缩</string>
+    <string name="file_other_title_str">其他</string>
+    <string name="file_sdcard_title_str">本地存储空间</string>
+    <string name="file_title_str">文件</string>
+    <string name="file_sdcard_info">总共：%1$s，可用：%2$s</string>
+    <string name="file_es_info">总数：%1$s个，大小：%2$s</string>
+    <string name="dot_str">·</string>
+    <string name="mine_file_whofile_str">%1$s的文件</string>
+    <string name="mine_file_statistical_str">统计导出文件</string>
+    <string name="mine_file_statistical_str1">%1$s的统计导出文件</string>
+    <string name="mine_file_comotherfile_str">该公司的其他文件</string>
+    <string name="mine_file_comotherfile_str_1">%1$s的其他文件</string>
+    <string name="mine_file_esfile_str">个人事事号文件</string>
+    <string name="mine_file_msg_str">消息及聊天下载的文件</string>
+    <string name="mine_file_collect_str">星标</string>
+    <string name="mine_file_collectfile_str">星标的文件</string>
+    <string name="mine_file_systemfile_str">系统文件</string>
+    <string name="mine_file_near30day_str">最近30天的文件</string>
+    <string name="mine_file_sdcardfolder_str">本机文件（目录）</string>
+    <string name="mine_file_sdcardtype_str">本机文件（类型）</string>
+    <string name="mine_file_qq_str">QQ文件</string>
+    <string name="mine_file_wps_str">WPS文件</string>
+    <string name="mine_file_wx_str">微信文件</string>
+    <string name="choice_str">选择</string>
+    <string name="confirm_str">确认</string>
+    <string name="cancel_str">取消</string>
+    <string name="exit_str">退出</string>
+    <string name="EBlog_str">事事</string>
+    <string name="initiate_chat_str">发起聊天</string>
+    <string name="initiate_company_str">创建企业</string>
+    <string name="add_friends">添加好友</string>
+    <string name="add_friends_message">添加</string>
+    <string name="scan_str">扫一扫</string>
+    <string name="search_str">搜索</string>
+    <string name="Input_text_str">输入文字...</string>
+    <string name="open_str">打开</string>
+
+    <!--通讯录-->
+    <string name="friends_str">好友</string>
+    <string name="contact_str">通讯录</string>
+    <string name="phone_contact_str">手机联系人</string>
+    <string name="group_str">群组</string>
+    <string name="follow_str">关注</string>
+    <string name="manager_str">管理</string>
+    <string name="msg_notify_content_pic_str">[图片]</string>
+    <string name="msg_notify_content_file_str">[文件]</string>
+    <string name="msg_notify_content_local_str">[位置]</string>
+    <string name="msg_notify_content_video_str">[视频]</string>
+    <string name="msg_notify_content_voice_str">[音频]</string>
+    <string name="msg_notify_content_card_str">[名片]</string>
+    <string name="msg_notify_content_task_str">[任务]</string>
+    <string name="message_personal_str">个人</string>
+    <string name="message_business_str">企业</string>
+    <string name="chat_me_str">我</string>
+    <string name="localation_str">位置</string>
+    <string name="chat_function_pass_down_str">按往说话</string>
+    <string name="chat_room_select_pic_str">选择图片</string>
+    <string name="display_max_msg_num_str">99+</string>
+    <string name="chat_adapter_card_str">个人名片</string>
+    <string name="create_chat_company_str">创建企业内部聊天</string>
+    <string name="create_company_content_str">企业内部聊天成员仅限同事,离职自动退群</string>
+    <string name="create_chat_user_str">创建个人聊天</string>
+    <string name="create_chat_user_content_str">成员不限于同事</string>
+    <string name="next_str">下一步</string>
+    <string name="add_photo_str">点击添加头像</string>
+    <string name="im_team_name_str">聊天名称</string>
+    <string name="click_and_input_str">点击输入</string>
+    <string name="im_to_camera_str">拍照</string>
+    <string name="im_choice_photo_str">相册选择</string>
+    <string name="im_who_invent_who_str">%1$s邀请你加入%2$s!</string>
+    <string name="im_who_invent_whos_str">%1$s邀请%2$s加入%3$s</string>
+    <string name="im_create_choice_photo_str">请选择一个头像</string>
+    <string name="im_create_input_team_title_str">请输入群名称</string>
+    <string name="im_create_succ_str">创建群聊成功</string>
+    <string name="im_acrtd_group_user_str">群成员</string>
+    <string name="im_acrd_adduser_str">添加成员</string>
+    <string name="im_acrd_group_name_str">群名称</string>
+    <string name="im_acrd_group_qrcode_str">群二维码</string>
+    <string name="im_acrd_transfer_str">转让该群</string>
+    <string name="im_acrd_set_manager_str">设置管理员</string>
+    <string name="im_acrd_to_top_str">置顶聊天</string>
+    <string name="im_acrd_disturb_str">消息免打扰</string>
+    <string name="im_acrd_file_str">聊天文件</string>
+    <string name="im_acrd_find_str">查找聊天内容</string>
+    <string name="im_acrd_clear_str">清空聊天信息</string>
+    <string name="im_acrd_dissolve_str">解散该群</string>
+    <string name="im_acrd_exit_str">删除并退出</string>
+    <string name="im_crtda_enter_clear_str">确定要清空聊天信息么？</string>
+    <string name="im_sure_str">确定</string>
+    <string name="im_cancel_str">取消</string>
+    <string name="im_acrdul_search_str">搜索人员</string>
+    <string name="im_creater_str">创建者</string>
+    <string name="im_master_str">管理员</string>
+    <string name="im_normal_str">普通成员</string>
+    <string name="im_crdul_deluser_str">删除成员</string>
+    <string name="im_change_creater_succ_str">转让成功</string>
+    <string name="im_change_creater_fail_str">转让失败</string>
+    <string name="im_change_succ_str">修改成功</string>
+    <string name="im_sure_choice_str">确定选择%1$s么？</string>
+    <string name="im_sure_set_master_str">确定设置%1$s为管理员么？</string>
+    <string name="im_cancel_set_master_str">确定取消设置%1$s为管理员么？</string>
+    <string name="im_sure_set_master_succ_str">设置管理员成功!</string>
+    <string name="im_cencel_set_master_succ_str">取消设置管理员成功!</string>
+    <string name="im_sure_set_master_fail_str">设置管理员失败!</string>
+    <string name="im_cencel_set_master_fail_str">取消设置管理员失败!</string>
+    <string name="im_del_team_succ_str">解散xxx成功!</string>
+    <string name="im_del_team_fail_str">解散xxx失败!</string>
+    <string name="im_del_user_succ_str">退出xxx成功!</string>
+    <string name="im_del_user_fail_str">退出xxx失败!</string>
+    <string name="del_succ_str">删除成功</string>
+    <string name="im_team_deling_str">解散中，请稍后</string>
+    <string name="im_team_exiting_str">退出中，请稍后</string>
+    <string name="camera_close_str">关闭</string>
+    <string name="camera_auto_str">自动</string>
+    <string name="camera_open_str">打开</string>
+    <string name="camera_direct_choice_str">切换摄像头</string>
+    <string name="camera_creating_image_str">创建图像中…</string>
+    <string name="file_select_succ_str">完成</string>
+    <string name="file_select_succ_str_num">完成(%1$d/%2$d)</string>
+    <string name="file_manager_num_str">%1$d/%2$d</string>
+    <string name="file_manager_already_num_str">已选择%1$d个</string>
+    <string name="file_pic_select_to_camera_str">拍摄照片</string>
+    <string name="file_all_pic_str">所有图片</string>
+    <string name="file_browse_str">浏览</string>
+    <string name="file_browse_str_num">浏览(%1$d)</string>
+    <string name="file_piece_str">%1$d张</string>
+    <string name="file_original_image_num_str">原图(%1$s)</string>
+    <string name="file_size_image_num_str">图片大小(%1$s)</string>
+    <string name="file_choice_str">选择</string>
+    <string name="file_pic_zip_str">图片质量压缩中，请稍后…</string>
+    <string name="chat_progress_str">%1$s / %2$s</string>
+    <string name="qrcode_hasnot_str">二维码不存在</string>
+    <string name="qrcode_create_fail_str">生成二维码失败</string>
+    <string name="qrcode_user_str">使用事事明App扫一扫</string>
+    <string name="qrcode_team_id_str">群ID：</string>
+    <string name="qrcode_blog_id_str">事事号ID：</string>
+    <string name="qrcode_share_str">分享</string>
+    <string name="file_manager_company_other_str">该公司下的其他文件</string>
+    <string name="select_all_str">全选</string>
+    <string name="clear_select_all_str">全不选</string>
+    <string name="widget_alert_edit_new_name_str">请输入新的名称</string>
+    <string name="widget_alert_edit_title_str">重命名</string>
+    <string name="file_searching_str">已搜索到%1$d个结果（正在搜索…）</string>
+    <string name="file_searched_str">已搜索到%1$d个结果（搜索完成）</string>
+    <string name="file_search_operate_str">选择并操作</string>
+    <string name="collection_str">收藏</string>
+    <string name="set_str">设置</string>
+    <string name="app_check_new_ver_str">正在检测新版本</string>
+    <string name="app_find_new_ver_str">发现新版本 （%1$s），是否立即升级？</string>
+    <string name="tip_str">提示</string>
+    <string name="app_already_new_ver_str">已是最新版本</string>
+    <string name="downloading_new_ver_str">正在下载新版本</string>
+    <string name="app_download_error_str">下载失败，请重新尝试</string>
+    <string name="sure_clear_and_logout_str">确认要清空数据么？</string>
+    <string name="sure_quit_str">是否真的要退出登录？</string>
+    <string name="highpraise_hint_str">轻点星型来评分</string>
+    <string name="title_str">标题</string>
+    <string name="hightpraise_content_hint_str">评论（选填）</string>
+    <string name="highpraise_no_title_str">请输入标题</string>
+    <string name="share_to_friend_str">分享给好友</string>
+    <string name="user_help_str">使用帮助</string>
+    <string name="account_and_safe_str">账户与安全</string>
+    <string name="distance_privacy_settings">距离隐私设置</string>
+    <string name="save_photos_and_videos">照片和视频自动保存到相册</string>
+    <string name="setting_comment_str">亲，给个好评，鼓励下开发的小蜜蜂吧</string>
+    <string name="setting_share_str">觉得软件不错，分享给好友</string>
+    <string name="feedback_str">意见反馈</string>
+    <string name="check_update_str">检查更新</string>
+    <string name="clear_data_str">清空数据</string>
+    <string name="exit_login_str">退出登录</string>
+    <string name="brackets">[%1$s]</string>
+    <string name="photo_camera_str">拍照</string>
+    <string name="photo_folder_str">从相册中上传</string>
+    <string name="modify_error_str">修改失败</string>
+    <string name="modifing_str">修改中…</string>
+    <string name="msg_push_tip_str">您可以设置是否需要声音和震动</string>
+    <string name="sound_str">声音</string>
+    <string name="vibration_str">震动</string>
+    <string name="night_nodisturb_str">夜间消息免打扰</string>
+    <string name="im_changing_owner_str">转让中…</string>
+    <string name="get_info_fail_str">获取信息失败</string>
+    <string name="qrcode_scan_result_str">您扫描到的信息为：%1$s</string>
+    <string name="qrcode_scan_tip_str">将二维码/条码放入框内，即可自动扫描</string>
+    <string name="brcode_scan_tip_str">将条码放入框内，即可自动扫描</string>
+    <string name="setting_now_posiiton_str">当前地区</string>
+    <string name="_1s_2s_str">%1$s&#160;%2$s</string>
+    <string name="setting_all_area_str">可选地区</string>
+    <string name="setting_already_area_str">已选地区</string>
+    <string name="complete_str">完成</string>
+    <string name="update_succ_str">更新成功</string>
+    <string name="update_fail_str">更新失败</string>
+    <string name="updating_str">更新中…</string>
+    <string name="deleting_str">删除中…</string>
+    <string name="checkingin_remove_plan_str">从该考勤方案中移除</string>
+    <string name="checking_in_plan_status_str">方案状态</string>
+    <string name="already_enable_str">已启用</string>
+    <string name="already_unenable_str">已关闭</string>
+    <string name="checking_in_last_modify_user_str">最后修改人员</string>
+    <string name="checking_in_plan_name_str">方案名称</string>
+    <string name="checking_in_position_str">考勤地点</string>
+    <string name="checking_in_effective_range_str">有效范围</string>
+    <string name="checking_in_connect_wifi_str">考勤可连接WiFi数量</string>
+    <string name="checking_in_connect_wifi_str_1">考勤需连接WiFi</string>
+    <string name="checking_in_elastic_str">弹性工作制考勤方式</string>
+    <string name="meter_str">%1$d米</string>
+    <string name="one_str">%1$d个</string>
+    <string name="checking_in_worktime_str">工作时间</string>
+    <string name="checking_in_elastic_work_time_str">上班弹性时间</string>
+    <string name="checking_in_all_work_time_str">全天总工作时长</string>
+    <string name="checking_in_all_work_time_str_1">全天总工作时长：%1$s</string>
+    <string name="checking_in_work_time_str">上班时间</string>
+    <string name="checking_in_nowork_time_str">下班时间</string>
+    <string name="num_time_str">%1$s小时</string>
+    <string name="more_str">更多</string>
+    <string name="yesterday_str">昨天</string>
+    <string name="today_str">今天</string>
+    <string name="normal_clockin_str">正常打卡</string>
+    <string name="out_clockin_str">外勤打卡</string>
+    <string name="localing_clockin_str">正在获取定位……</string>
+    <string name="punchin_str">上班打卡</string>
+    <string name="punchout_str">下班打卡</string>
+    <string name="get_clockin_info_fail_str">获取打卡信息失败</string>
+    <string name="checkingin_gotoset_str">您的公司%1$s未设置考勤，您是企业管理员，可以去设置考勤方案，是否要去设置？</string>
+    <string name="checkingin_gotoset1_str">您的公司%1$s未设置考勤，但您可以签到。</string>
+    <string name="checkingin_gotoset2_str">您的公司%1$s还未让您加入考勤，但您可以签到。</string>
+    <string name="checkingin_gotoset2_1_str">您的公司%1$s还未让%2$s加入考勤，但您可以签到。</string>
+    <string name="checkingin_gotoset3_str">您的公司%1$s还未开启考勤，但您可以签到。</string>
+    <string name="clockingin_now_str">打卡中…</string>
+    <string name="clocking_in_succ_str">打卡成功</string>
+    <string name="to_sign_in_str">立即签到</string>
+    <string name="sign_in_num_str">今日已签到 %1$s 次</string>
+    <string name="sign_time_str">签到时间</string>
+    <string name="sign_local_str">签到地点</string>
+    <string name="sign_click_and_change_str">点击地点微调</string>
+    <string name="sign_et_hint_str">写点儿什么备注吧...</string>
+    <string name="sign_local_modify_str">地点微调</string>
+    <string name="no_fillin_str">请写点什么吧。</string>
+    <string name="sign_fail_str">签到失败</string>
+    <string name="signin_succ_str">签到成功</string>
+    <string name="signing_str">签到中…</string>
+    <string name="data_error">数据错误</string>
+    <string name="load_ing_str">加载中…</string>
+    <string name="now_load_ing_str">正在加载中…</string>
+    <string name="final_data">没有数据了</string>
+    <string name="load_next_data">加载更多</string>
+    <string name="load_data_error_and_retry">出错了,请稍后再试</string>
+    <string name="to_set_str">去设置</string>
+
+
+    <string name="zone_img_position">circle_img_position</string>
+
+    <string name="choice_depart_str">选择部门</string>
+    <string name="already_choice_n_str">已选择%1$d个</string>
+    <string name="choice_member_str">选择成员</string>
+    <string name="checkingin_date_str">考勤日期</string>
+    <string name="to_str">至</string>
+    <string name="to_checkingin_statist_str">立即统计</string>
+    <string name="checkingin_type_date_str">（弹性）</string>
+    <string name="checkingin_type_num_str">（排班）</string>
+    <string name="num_member_str">%1$d人</string>
+    <string name="checkingin_member_manager_str">考勤人员管理</string>
+    <string name="checkingin_modify_str">修改考勤方案</string>
+    <string name="checkiningin_add_str">添加考勤方案</string>
+    <string name="checkingin_search_self_str">查询个人的考勤方案</string>
+    <string name="del_fail_str">删除失败</string>
+    <string name="deleteing_str">删除中…</string>
+    <string name="add_str">添加</string>
+    <string name="add_succ_str">添加成功</string>
+    <string name="add_fail_str">添加失败</string>
+    <string name="adding_str">添加中…</string>
+    <string name="is_remove_x_str">是否要移除%1$s？</string>
+    <string name="enable_str">启用</string>
+    <string name="checking_in_notify_str">推送通知开启后，员工会收到相应的通知信息</string>
+    <string name="checking_in_start_notify_str">第一次上班前10分钟通知</string>
+    <string name="notify_content_str">通知内容</string>
+    <string name="checking_in_elastic_work_str">弹性工作制</string>
+    <string name="checking_in_elastic_times_str">设置上班弹性时间</string>
+    <string name="checking_in_add_work_time_str">添加时间段</string>
+    <string name="checking_in_del_this_time_str">删除该时间段</string>
+    <string name="checking_in_del_plan_str">删除方案</string>
+    <string name="checking_in_save_plan_str">保存方案</string>
+    <string name="checking_in_end_notify_str">最后一次下班后10分钟通知</string>
+    <string name="n_hour_m_min">%1$d小时%2$d分</string>
+    <string name="n_hour_m_min_1">%1$s小时%2$s分</string>
+    <string name="n_min">%1$d分钟</string>
+    <string name="n_hour">%1$d小时</string>
+    <string name="get_dataing_str">获取数据中…</string>
+    <string name="get_data_succ_str">获取数据成功</string>
+    <string name="get_data_fail_str">获取数据失败</string>
+    <string name="get_infoing_str">获取信息中…</string>
+    <string name="get_info_succ_str">获取信息成功</string>
+    <string name="saving_str">保存中…</string>
+    <string name="save_succ_str">保存成功</string>
+    <string name="save_fail_str">保存失败</string>
+    <string name="set_plan_name_str">设置方案名称</string>
+    <string name="plan_name_str">方案名称</string>
+    <string name="set_plan_first_notify_str">设置第一次上班前10分钟通知</string>
+    <string name="set_plan_last_notify_str">设置最后一次下班前10分钟通知</string>
+    <string name="set_null">无</string>
+    <string name="create_elastic_set_str">新建弹性考勤设置</string>
+    <string name="msg_notify_str">消息通知</string>
+    <string name="html_color_str"><![CDATA[<font color=\'%1$s\'>]]>%2$s<![CDATA[</font>]]></string>
+    <string name="agree_str">同意</string>
+    <string name="ignore_str">忽略</string>
+    <string name="already_agree_str">已同意</string>
+    <string name="already_ignore_str">已忽略</string>
+    <string name="to_localing_str">正在定位中…</string>
+    <string name="is_to_field_clock_str">是否要进行外勤打卡？</string>
+    <string name="to_sign_max_9_str">最多只能上传9张照片</string>
+    <string name="checking_in_noset_time_str">您的公司未设置打卡时间</string>
+    <string name="voice_finger_up_str">手指上滑，取消发送</string>
+    <string name="voice_short_str">录音时间太短</string>
+    <string name="voice_loosen_finger_str">松开手指，取消发送</string>
+    <string name="no_name_str">普通群聊</string>
+    <string name="image_tag">image_tag</string>
+    <string name="im_send_voice_fail_str">发送语音失败</string>
+    <string name="im_send_pic_fail_str">发送图片失败</string>
+    <string name="im_send_file_fail_str">发送文件失败</string>
+
+    <string name="im_longclick_copy_str">复制</string>
+    <string name="im_longclick_resend_str">重发</string>
+    <string name="im_longclick_forward_str">转发</string>
+    <string name="im_longclick_delete_str">删除</string>
+    <string name="im_longclick_recall_str">撤回</string>
+    <string name="im_longclick_download_str">下载</string>
+    <string name="copy_succ_str">复制成功</string>
+    <string name="download_succ_str">下载成功</string>
+    <string name="recall_one_msg_str">撤回了一条消息</string>
+    <string name="your_str">你</string>
+    <string name="to_recalling_msg_str">正在撤回消息</string>
+    <string name="msg_recall_succ_str">撤回成功</string>
+    <string name="to_fowarding_message_str">转发消息中…</string>
+    <string name="to_onlookering_message_str">发送邀请中…</string>
+    <string name="enter_to_send_msg_str">确定发送消息？</string>
+    <string name="enter_to_foward_msg_str">确定转发消息？</string>
+    <string name="enter_to_dynamic_msg_str">确定邀请围观？</string>
+    <string name="to_foward_msg_succ_str">转发成功</string>
+    <string name="to_foward_msg_fail_str">转发失败</string>
+    <string name="search_folder_user_str">搜索文件名/上传者</string>
+    <string name="come_from_who_str"><![CDATA[来自 <font color=\'%1$s\'>%2$s</font>]]></string>
+    <string name="come_from_str">来自 </string>
+    <string name="download_str">下载</string>
+    <string name="forward_str">转发</string>
+    <string name="file_document_title_str">文档</string>
+    <string name="im_allready_exit_chat_str">您已经退出了该聊天</string>
+    <string name="phone_image_str">手机相册</string>
+    <string name="to_join_str">申请加入</string>
+    <string name="qrcode_card_str">二维码名片</string>
+    <string name="to_join_success_str">申请成功</string>
+    <string name="info_str">信息</string>
+    <string name="save_qrcode_card_str">保存二维码名片</string>
+    <string name="to_scan_qrcode_str">扫描二维码</string>
+    <string name="save_to_photo_list_str">已经保存到手机相册</string>
+    <string name="has_user_at_you_str"><![CDATA[<font color=\'#2196F3\'>[有人@你]</font>]]></string>
+    <string name="all_user_str">全体成员</string>
+    <string name="to_onlooker_str">%1$s邀请您来围观%2$s在%3$s在%4$s发布的动态：</string>
+    <string name="chat_content_high_light_str"><![CDATA[<font color=\'E8382B\'><u>%1$s</u></font>]]></string>
+    <string name="allready_clear_chat_history_str">已清空聊天记录</string>
+    <string name="net_can_no_used_str">网络不可用</string>
+    <string name="cant_connection_server_str">无法连接服务器</string>
+    <string name="old_password">原密码</string>
+    <string name="new_password">新密码</string>
+    <string name="confirm_password">确认新密码</string>
+
+    <string name="have_null">暂无</string>
+    <string name="olny_choice_n_pic_str">您只能选择%1$d个图片</string>
+    <string name="olny_choice_n_file_str">您只能选择%1$d个文件</string>
+    <string name="send_im_msg_only_1_pic_str">发送聊天消息只能选择1张图片</string>
+
+
+    <string name="watch_info_str">查看信息</string>
+    <string name="to_deal_with_str">去查看</string>
+    <string name="to_check_in_str">去打卡</string>
+    <string name="warning_info_str">预警信息</string>
+    <string name="checking_in_remind_str">打卡提醒</string>
+    <string name="no_net_str">网络好像不给力，联网后，再次点击试试~</string>
+    <string name="no_data_str">暂时没有数据</string>
+    <string name="no_prepare_str">没准备好的时候，可以存到这里~</string>
+    <string name="all_message_str">所有消息</string>
+
+
+    <string name="list_empty_default_info">暂无数据</string>
+    <string name="list_empty_company_info">还没有找到组织，赶快创建个企业或加入一个企业吧</string>
+    <string name="list_empty_things_info">没有事事信息</string>
+    <string name="list_empty_message_info">没有聊天信息</string>
+    <string name="list_empty_network_info">网络错误</string>
+    <string name="sending_message_str">发送消息中…</string>
+    <string name="enter_send_thing_msg_str">确定发送事事消息？</string>
+    <string name="enter_send_thing_share_msg_str">确定要分享事事号信息？</string>
+
+
+    <string name="cooperation_title">(合作方)</string>
+    <string name="my_things_dynamics">我的动态</string>
+    <string name="common_dynamics">常用事事</string>
+    <string name="the_headlines">企业头条</string>
+    <string name="things_search_hint">请输入事事名称、编号、便签等关键字</string>
+    <string name="things_create_data">事事号创建日期</string>
+    <string name="things_number_str">事事号</string>
+    <string name="msg_notify_content_thing_str">[事事号]</string>
+    <string name="from_my_company_choice_str">从本公司通讯录中选择人员</string>
+    <string name="things_setup_user_permission">设置全员权限</string>
+    <string name="things_setup_visual_setup">可见设置</string>
+    <string name="things_setup_user_permission_1">可看评论</string>
+    <string name="things_setup_user_permission_2">可写评论</string>
+    <string name="things_setup_user_permission_3">可发布动态</string>
+    <string name="things_setup_user_permission_4">可转发动态</string>
+    <string name="things_setup_user_permission_5">可邀请围观</string>
+    <string name="things_setup_user_permission_6">可进入群聊</string>
+    <string name="choice_user_str">选择人员</string>
+    <string name="selector_quantity">已选%1$d个</string>
+    <string name="filed">归档</string>
+    <string name="filed_yes">已归档</string>
+    <string name="filed_not">未归档</string>
+    <string name="to_collection_succ_str">收藏成功</string>
+    <string name="please_enter_group_name_str">请输入群名称</string>
+    <string name="things_number_qrcode_str">事事号二维码</string>
+    <string name="download_error_str">下载失败</string>
+    <string name="xh_xm_str">%1$d:%2$d</string>
+    <string name="n_group_to_n_group_time_str">第%1$d组%2$s班时间不能比第%3$d组%4$s班时间早~请重新设置</string>
+    <string name="checingin_record_str">考勤记录</string>
+    <string name="sign_record_str">签到记录</string>
+
+    <string name="checingin_record_60_str">考勤记录(最近60天)</string>
+    <string name="sign_record_60_str">签到记录(最近60天)</string>
+    <string name="normal_str">正常</string>
+    <string name="outside_str">外勤</string>
+    <string name="checkingin_statistical_str">考勤统计</string>
+    <string name="is_need_update_sign_str">是否要更新打卡?</string>
+    <string name="click_and_watch_task_str">点击查看任务</string>
+    <string name="create_task_str">创建任务</string>
+
+    <string name="drafts">草稿箱</string>
+    <string name="synchronous">同步</string>
+    <string name="synchronous_yes">已同步</string>
+    <string name="synchronous_no">未同步</string>
+    <string name="del_drafts">删除草稿</string>
+    <string name="del_drafts_tips">确定删除这些草稿，删除后不可恢复</string>
+    <string name="drafts_things_name_prefix">来自事事号：%1$s</string>
+    <string name="checking_to_open_gps_str">考勤需要开启手机定位，您是否要跳转到系统页面开启GPS？</string>
+    <string name="you_choice_pic_max_str">您已选图片数量达到上限</string>
+    <string name="no_record_forever_str">%1$s 没有记录</string>
+    <string name="clearing_cache_str">清理缓存中…</string>
+
+    <string name="choice">已选</string>
+    <string name="choice_number">已选%1$d个</string>
+    <string name="choice_member_number">已选%1$d人</string>
+    <string name="already_choice_number">已选择：%1$d个</string>
+    <string name="already_choice_member_number">已选择：%1$d人</string>
+    <string name="already_choice_department_number">已选择：%1$d个部门</string>
+    <string name="already_choice_company_number">已选择：%1$d个公司</string>
+    <string name="already_choice_things_number">已选择：%1$d个事事</string>
+    <string name="already_choice_dynamic_number">已选择：%1$d个动态</string>
+    <string name="already_choice_work_table_number">已选择：%1$d个工作表</string>
+    <string name="already_choice_place_number">已选择：%1$d个地点</string>
+    <string name="already_choice_file_number">已选择：%1$d个文件</string>
+    <string name="already_choice_category_number">已选择：%1$d个类别</string>
+    <string name="already_choice_default">未选择</string>
+    <string name="already_choice_member_default">未选择人</string>
+    <string name="already_choice_department_default">未选择部门</string>
+    <string name="already_choice_company_default">未选择公司</string>
+    <string name="already_choice_things_default">未选择事事</string>
+    <string name="already_choice_dynamic_default">未选择动态</string>
+    <string name="already_choice_work_table_default">未选择工作表</string>
+    <string name="already_choice_place_default">未选择地点</string>
+    <string name="already_choice_file_default">未选择文件</string>
+    <string name="already_choice_category_default">未选择类别</string>
+
+    <string name="choose_dynamic_title">企业头条</string>
+    <string name="choose_create">新建频道</string>
+    <string name="choose_create_info">你还没有频道  赶快新建一个吧</string>
+    <string name="channel_create_title">添加新频道</string>
+    <string name="channel_create_name_hint">请输入频道名称</string>
+    <string name="channel_create_name_extend">频道名称最多为8个汉字或16个字母</string>
+    <string name="channel_create_things_extend">您还没有给频道中添加事事号</string>
+
+    <string name="channel_create_add_button">添加事事号</string>
+    <string name="channel_create_select_things">已添加%1$d个事事号</string>
+    <string name="channel_create_error_info_1">频道信息错误，请修改后再试</string>
+    <string name="channel_manager_title">频道管理</string>
+    <string name="channel_del_tips">确定删除频道，删除后不可恢复</string>
+    <string name="choose_things">选择事事号</string>
+    <string name="choose_work_item">选择工作项</string>
+    <string name="choose_work_table">选择工作表</string>
+    <string name="choose_work_table_non_empty">选择工作表(必选)</string>
+    <string name="mandatory_matcher">\\(必选\\)</string>
+    <string name="notify_already_delete_str">公告已删除</string>
+    <string name="input_txt_ceiling_str">可输入字数已达到上限</string>
+    <string name="choose_things_warning">产生预警的事事号</string>
+    <string name="choose_user_warning_trigger">触发预警的人员</string>
+    <string name="choose_user_warning_handler">处理预警的人员</string>
+    <string name="choose_warning_task_state">预警任务状态</string>
+    <string name="choose_data_time_trigger">预警发生时间</string>
+    <string name="choose_data_time_handler">预警处理时间</string>
+    <string name="choose_work_table_trigger">产生预警的工作表</string>
+    <string name="choose_state_warning_all">全部</string>
+    <string name="choose_state_warning_treated">已处理</string>
+    <string name="choose_state_warning_untreated">未处理</string>
+    <string name="choose_start_data_prompt">开始时间不能大于结束时间</string>
+    <string name="choose_end_data_prompt">结束时间不能小于开始时间</string>
+
+
+    <string name="empty_condition">清空条件</string>
+    <string name="search">搜索</string>
+    <string name="instant_search">立即搜索</string>
+    <string name="statistics">统计</string>
+    <string name="data">日期</string>
+    <string name="choose_data">选择日期</string>
+    <string name="data_default"></string>
+    <string name="to">至</string>
+    <string name="search_condition_title">标题</string>
+    <string name="search_search_title_default">标题</string>
+    <string name="empty"></string>
+    <string name="toast_create_simple_work_table">请到PC端进行操作www.123eblog.com</string>
+
+    <string name="choose_task_dispatch_note">选择任务分配单</string>
+    <string name="choose_task_dispatch_note_not_empty">选择任务分配单(必选)</string>
+    <string name="choose_work_table_fill_user">填工作表的人</string>
+    <string name="choose_work_table_task_allocation_fill_user">填任务分配单的人</string>
+    <string name="choose_work_table_warning_fill_user">触发预警的工作表填表人</string>
+    <string name="data_format">%1$d-%2$d-%3$d</string>
+    <string name="data_time_format">%1$d-%2$d-%3$d %4$s:%5$s</string>
+    <string name="warning_info_table">预警信息表</string>
+    <string name="warning_info_table_not_empty">预警信息表(必选)</string>
+    <string name="stats_task_dispatch_note">任务分配单统计</string>
+    <string name="stats">统计</string>
+    <string name="choice_from_table">按表统计</string>
+    <string name="choice_from_item">按项统计</string>
+    <string name="choice_work_table">工作表统计</string>
+    <string name="toast_choice_work_item">请到PC端进行统计 www.123eblog.com</string>
+    <string name="toast_choose_work_table_empty">请先选择工作表</string>
+    <string name="toast_choose_task_allocation_empty">请先选择任务分配单</string>
+    <string name="toast_choose_allocation_empty">请先选择分配单</string>
+    <string name="choice_file_no_download_str">您选择的文件还未下载</string>
+    <string name="none_str">无</string>
+    <string name="pic_already_save_n_str">文件已保存到：%1$s</string>
+    <string name="copy_filename_str">复制文件名</string>
+    <string name="im_share_url_str">[分享-链接]</string>
+    <string name="im_work_url_str">[分享-表单]</string>
+    <string name="mine_collection_things_name_str"><![CDATA[<font color=\'#1A1A1C\'>事事号：</font><font color=\'#2196F3\'>%1$s</font>]]></string>
+    <string name="empty_str"> </string>
+    <string name="checking_plan_str">考勤方案</string>
+    <string name="please_input_plan_title_str">请输入考勤方案名称</string>
+    <string name="please_choice_plan_time_str">请选择考勤时间</string>
+    <string name="please_cloice_plan_address_str">请选择考勤地点</string>
+    <string name="please_choice_plan_range_str">请选择有效考勤范围</string>
+    <string name="forward_x_at_x_dynamic_str">转发%1$s在%2$s发的动态：</string>
+    <string name="no_title_netpage_str">无标题网页</string>
+    <string name="send_succ_str">发送成功</string>
+    <string name="fowrard_succ_str">转发成功</string>
+    <string name="invite_succ_str">邀请成功</string>
+    <string name="send_fail_str">发送失败</string>
+    <string name="forward_fail_str">转发失败</string>
+    <string name="invite_fail_str">邀请失败</string>
+    <string name="send_to_str">发送给</string>
+    <string name="leave_word_str">留言</string>
+    <string name="sending_str">发送中…</string>
+    <string name="please_download_to_share_str">请先点击下载文件后，再进行分享</string>
+
+    <string-array name="face_more_item_str">
+        <item>图片</item>
+        <item>拍照</item>
+        <item>名片</item>
+        <item>位置</item>
+        <item>文件</item>
+        <item>收藏</item>
+        <item>文档编辑</item>
+        <item>工作表</item>
+    </string-array>
+
+    <string-array name="face_more_item_str_withnowps">
+        <item>图片</item>
+        <item>拍照</item>
+        <item>名片</item>
+        <item>位置</item>
+        <item>文件</item>
+        <item>收藏</item>
+        <item>工作表</item>
+    </string-array>
+
+    <string-array name="company_notify_filtrate">
+        <item>所有消息</item>
+        <item>公告</item>
+        <item>预警</item>
+        <item>考勤打卡</item>
+    </string-array>
+
+    <string-array name="dynamic_search_result_type">
+        <item>时间</item>
+        <item>阅读数</item>
+        <item>点赞数</item>
+        <item>评论数</item>
+    </string-array>
+
+    <string-array name="dynamic_type">
+        <item>我的动态</item>
+        <item>我点赞的动态</item>
+        <item>我聊一聊的动态</item>
+        <item>我说问题的动态</item>
+        <item>我提建议的动态</item>
+        <item>我收到赞的动态</item>
+        <item>我收到聊一聊的动态</item>
+        <item>我收到问题的动态</item>
+        <item>我收到建议的动态</item>
+        <item>我发布工作表的动态统计</item>
+        <item>我查看工作表的行为统计</item>
+    </string-array>
+</resources>

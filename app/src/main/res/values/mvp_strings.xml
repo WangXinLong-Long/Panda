@@ -1,0 +1,5 @@
+<resources>
+    <string name="loginpresenter_toolbar_title">DEMO TITLE</string>
+    <string name="loginactivity_toolbar_title">登录</string>
+    <string name="splashactivity_toolbar_title">DEMO TITLE</string>
+</resources>

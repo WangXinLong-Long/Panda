@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--导航栏底色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--状态栏底色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <!--各控件选中的颜色-->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!--各控件默认的颜色-->
+        <item name="colorControlNormal">@color/color_white</item>
+
+        <!--导航栏上的标题颜色-->
+        <item name="android:textColorPrimary">@android:color/black</item>
+
+        <item name="android:actionMenuTextAppearance">@style/BaseActionBar.MenuTextStyle</item>
+        <item name="android:windowAnimationStyle">@style/BaseAnimation</item>
+        <!--Activity窗口的颜色-->
+        <item name="android:windowBackground">@android:color/white</item>
+
+        <!--toolbar溢出菜单marginTop-->
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+
+        <!--设置标题栏上按钮颜色-->
+        <item name="android:textColorSecondary">@color/color_white</item>
+
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.PlayerSheet">
+        <!--     <item name="android:windowEnterTransition">@transition/player_sheet_enter</item>
+             <item name="android:windowReturnTransition">@transition/player_sheet_return</item>-->
+        <item name="android:windowBackground">@color/color_translucent_background</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- 溢出菜单为 + 的主题-->
+    <style name="ActionAddOverFlowTheme" parent="AppTheme">
+        <!--设置menu溢出菜单的图标-->
+        <item name="android:actionOverflowButtonStyle">@style/AddOverFlow</item>
+    </style>
+
+    <!-- 考勤 溢出菜单为 + 的主题-->
+    <style name="ActionCheckAddOverFlowTheme" parent="AppTheme">
+        <!--设置menu溢出菜单的图标-->
+        <item name="android:actionOverflowButtonStyle">@style/CheckAddOverFlow</item>
+    </style>
+
+    <!-- IM 溢出菜单为 + 的主题-->
+    <style name="ActionIMAddOverFlowTheme" parent="AppTheme">
+        <!--设置menu溢出菜单的图标-->
+        <item name="android:actionOverflowButtonStyle">@style/IMAddOverFlow</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="AppTheme.ActivityTransparent" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Fullscreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <!-- 首页 tabLayout 字体大小 -->
+    <style name="TabLayoutText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TabLayoutChatText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ToolbarTextColor" parent="TabLayoutText">
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+
+    <!--设置menu溢出菜单的图标-->
+    <style name="AddOverFlow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_add</item>
+    </style>
+
+    <style name="CheckAddOverFlow">
+        <item name="android:title">@string/more_str</item>
+        <item name="android:background">?android:attr/actionBarItemBackground</item>
+        <item name="android:contentDescription">@string/more_str</item>
+
+    </style>
+
+    <style name="IMAddOverFlow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_more</item>
+    </style>
+
+    <!--溢出菜单样式 -->
+    <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+        <!-- <item name="overlapAnchor">false</item>-->
+        <!-- <item name="android:dropDownWidth">wrap_content</item>-->
+        <!--<item name="android:paddingRight">5dp</item>-->
+        <!--<item name="android:popupBackground">?attr/colorPrimary</item>-->
+        <item name="android:dropDownVerticalOffset">46dp</item>
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+    </style>
+
+    <!-- 圆形头像 -->
+    <style name="CircleHeaderPortrait">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+
+    <style name="myToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <!--checkBox 样式-->
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/color_gray</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+
+    <!--tabLayout 样式-->
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--去掉Toolbar leftMargin-->
+    <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="contentInsetStartWithNavigation">0dp</item><!--最重要的参数-->
+    </style>
+
+    <style name="BlueSwitch.control" parent="AppTheme">
+        <item name="colorControlActivated">#2196f3</item>
+    </style>
+
+</resources>

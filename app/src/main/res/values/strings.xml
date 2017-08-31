@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="ch">
+    <string name="management_and_member">管理部门和成员</string>
+    <string name="employee_turnover_str">离职员工</string>
+    <string name="share_enterprise_links_str">分享企业链接</string>
+    <string name="my_customer_service_str">我的客服</string>
+    <string name="enterprise_certification_str">企业认证</string>
+    <string name="enterprise_service_str">企业服务</string>
+    <string name="dissolution_of_enterprise_str">解散企业</string>
+    <string name="business_management_str">企业管理</string>
+    <string name="friends_str">好友</string>
+    <string name="failed_to_get_permission_for_contact">获取联系人的权限申请失败</string>
+    <string name="add_friends_str">添加</string>
+    <string name="already_friends_str">已添加</string>
+    <string name="quick_one_touch_phone_str">快速一键导入手机联系人</string>
+    <string name="attendance_str">考勤</string>
+    <string name="statistics_str">统计</string>
+    <string name="task_str">任务</string>
+    <string name="warning_str">预警</string>
+    <string name="worksheet_str">工作表</string>
+    <string name="i_release">我的动态</string>
+    <string name="create_things">创建事事号</string>
+    <string name="things_member_search_str"> 事事号搜索</string>
+    <string name="things_dynamic_search_str">动态搜索</string>
+    <string name="Instant_search_str">立即搜索</string>
+    <string name="search_result">搜索结果</string>
+    <string name="nearby_dynamics">附近的动态</string>
+    <string name="dynamic_str">动态</string>
+    <string name="edited_str">编辑</string>
+    <string name="release_str">发布</string>
+    <string name="blog_details_str">事事号详情</string>
+    <string name="release_dynamics_str">新建动态</string>
+    <string name="release_success">发布成功</string>
+    <string name="member_permissions">成员权限设置</string>
+    <string name="edit_data_str">编辑资料</string>
+    <string name="use_this_template">以此为模板创建事事</string>
+    <string name="member_visible_settings">成员可见设置</string>
+    <string name="I_am_under_the_authority_of_the_E_thing">我在该事事下的权限</string>
+    <string name="application_has_been_sent">申请已发送</string>
+    <string name="image_upload_error">图片上传错误，重新发布！</string>
+    <string name="image_tag">image_tag</string>
+    <string name="SelectThings">选择事事</string>
+    <string name="Sync_to_other_E_events">同步到其它事事号动态</string>
+    <string name="Remind_who">提醒谁看</string>
+    <string name="missing_key_parameters">缺少关键参数</string>
+    <string name="statistics_problemnum">说问题数量</string>
+    <string name="statistics_liaonum">聊一聊数量</string>
+    <string name="statistics_advicenum">提建议数量</string>
+    <string name="statistics_zannum">点赞数量</string>
+    <string name="statistics_date">日期</string>
+    <string name="statistics_name">姓名</string>
+    <string name="add_category">添加事事类别</string>
+    <string name="please_enter_name">请输入事事号名称</string>
+    <string name="group_chat">群聊</string>
+    <string name="failed_get_data">获取数据失败,请重试!</string>
+    <string name="things_archived">事事号已归档,无法发布动态</string>
+    <string name="things_archived_comment">事事号已归档,无法评论动态</string>
+    <string name="no_authority">暂无权限!</string>
+    <string name="collection">收藏</string>
+    <string name="all_str">全部</string>
+    <string name="string_dynamic_staticts">动态发布及他人互动统计</string>
+    <string name="protocol">点击上面的"注册"按钮,即代表你同意%1$s和%2$s</string>
+    <string name="quick_earch">快速搜索</string>
+    <string name="delete_partime_department_str">删除兼职部门</string>
+    <string name="adpd_department_str">部门（兼职）</string>
+    <string name="adpd_position_str">职位（兼职）</string>
+    <string name="enterprise_manager_str">企业管理员</string>
+    <string name="department_manager2">部门副主管</string>
+    <string name="department_worker">普通员工</string>
+
+    <!-- 工作表 下拉选择日期 -->
+    <string-array name="weeks">
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+        <item>星期日</item>
+    </string-array>
+
+    <string name="cancel">取消</string>
+    <string name="ensure">确定</string>
+
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+    <string name="personId">个人ID</string>
+    <string name="telephone">手机号</string>
+    <string name="email">邮箱</string>
+    <string name="modify_login_password">修改登录密码</string>
+    <string name="rule_password">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`¬!"£$%^*()~=#{}[];':,./?/*-_+&#060;&#062;&#064;&#038;</string>
+    <string name="share_text_to_weixin">回应文本到微信</string>
+    <string name="share_text_default">这段文字回应自微信SDK示例程序</string>
+    <string name="share_url_to_weixin">回应URL到微信</string>
+    <string name="share_pic_to_weixin">回应图片到微信</string>
+    <string name="share_music_to_weixin">回应音乐到微信</string>
+    <string name="share_video_to_weixin">回应视频到微信</string>
+    <string name="share_appdata_to_weixin">回应app消息到微信</string>
+
+    <string name="register_as_weixin_app_sender">注册微信事件发送器</string>
+    <string name="get_token_from_weixin">获取微信访问Token</string>
+    <string name="unregister_from_weixin">从微信反注册</string>
+
+    <string name="show_from_wx_tip">这个界面用于显示微信向第三方app请求显示的信息</string>
+
+    <string name="scan_qrcode_login">扫码登录</string>
+    <string name="auth">微信登录</string>
+    <string name="cancel_auth">取消登录</string>
+
+    <string name="qrcode_wait_for_scan">扫描二维码登录</string>
+    <string name="qrcode_scanned">点击确认登录</string>
+
+    <string name="result_succ" formatted="false">登录成功，code=%s</string>
+    <string name="result_normal_err">登录失败，一般错误</string>
+    <string name="result_network_err">登录失败，网络错误</string>
+    <string name="result_json_decode_err">json解码失败</string>
+    <string name="result_user_cancel">用户取消</string>
+    <string name="result_timeout_err">登录失败，超时错误</string>
+
+    <string name="target_scene">目标场景</string>
+    <string name="target_scene_session">会话</string>
+    <string name="target_scene_timeline">朋友圈</string>
+    <string name="target_scene_favorite">收藏</string>
+    <string name="app_back">返回</string>
+    <string name="app_ok">确定</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_continue">继续</string>
+    <string name="app_tip">提示</string>
+    <string name="app_send">发送</string>
+    <string name="app_set">设置</string>
+    <string name="app_save">保存</string>
+    <string name="app_delete">删除</string>
+    <string name="app_nextstep">下一步</string>
+    <string name="app_prevstep">上一步</string>
+    <string name="app_finish">完成</string>
+    <string name="app_find">查找</string>
+    <string name="app_edit">编辑</string>
+
+    <!-- applet -->
+    <string name="applet_secimg_title">填写验证码</string>
+    <string name="applet_secimg_change">换一张图片</string>
+    <string name="applet_seccode_tip">验证码不能为空</string>
+    <string name="applet_seccode_fail_tip">验证码错误，请重新输入</string>
+
+    <!-- verify -->
+    <string name="verify_password_null_tip">密码不能为空，请输入密码</string>
+
+    <!-- format -->
+    <string name="fmt_date">M月d日</string>
+    <string name="fmt_longdate">yyyy年M月d日</string>
+    <string name="fmt_datetime" formatted="false">M月d日 %skk:mm</string>
+    <string name="fmt_patime">kk:mm</string>
+    <string name="fmt_longtime" formatted="false">yyyy年M月d日 %skk:mm</string>
+    <string name="fmt_in60min" formatted="false">%d分钟前</string>
+    <string name="fmt_justnow">1分钟内</string>
+    <string name="fmt_dawn">凌晨</string>
+    <string name="fmt_morning">早上</string>
+    <string name="fmt_noon">中午</string>
+    <string name="fmt_afternoon">下午</string>
+    <string name="fmt_evening">晚上</string>
+    <string name="fmt_pre_yesterday">昨天</string>
+    <string name="fmt_iap_err" formatted="false">网络连接不可用，请稍候重试</string>
+
+    <string name="app_share">分享</string>
+
+    <string name="enter">这是SDK_Sample的入口界面</string>
+    <string name="reg">将该app注册到微信</string>
+    <string name="goto_send">跳转到发消息界面</string>
+    <string name="launch_wx">启动微信</string>
+    <string name="check_timeline_supported">检查是否支持发送到朋友圈</string>
+
+    <string name="send_to_wx_title">发送到微信</string>
+    <string name="get_from_wx_title">从微信接收</string>
+    <string name="show_from_wx_title">显示微信请求的消息</string>
+
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unsupported">不支持错误</string>
+    <string name="errcode_unknown">发送返回</string>
+
+    <!-- WXMediaMessage -->
+    <string name="send">发送到微信</string>
+    <string name="receive">从微信接收</string>
+
+    <string name="is_timeline">是否分享到朋友圈</string>
+    <string name="send_text">发送文本</string>
+    <string name="send_text_default">这段文字发送自微信SDK示例程序</string>
+
+    <string name="send_img">发送图片</string>
+    <string-array name="send_img_item">
+        <item>发送图片的二进制数据</item>
+        <item>发送图片的本地路径</item>
+        <!-- <item>发送图片的URL</item> -->
+    </string-array>
+    <string-array name="send_where">
+        <item>分享给朋友</item>
+        <item>分享到朋友圈</item>
+        <!-- <item>发送图片的URL</item> -->
+    </string-array>
+
+
+    <string name="send_img_file_not_exist">文件不存在</string>
+
+    <string name="send_pic">发送照片</string>
+
+    <string name="send_music">发送音乐</string>
+    <string-array name="send_music_item">
+        <item>发送音乐url</item>
+        <item>发送低带宽音乐url</item>
+    </string-array>
+
+    <string name="send_video">发送视频</string>
+    <string-array name="send_video_item">
+        <item>发送视频url</item>
+        <item>发送低带宽视频url</item>
+    </string-array>
+
+    <string name="send_webpage">发送网页</string>
+    <string-array name="send_webpage_item">
+        <item>发送网页url</item>
+    </string-array>
+
+    <string name="send_appdata">发送app消息</string>
+    <string-array name="send_appdata_item">
+        <item>发送app文件本地路径</item>
+        <item>发送app二进制数据</item>
+        <item>发送无附件的app</item>
+    </string-array>
+
+    <string name="send_emoji">发送表情消息</string>
+    <string-array name="send_emoji_item">
+        <item>发送表情本地路径</item>
+        <item>发送表情二进制数据</item>
+    </string-array>
+
+    <string-array name="send_emoji_item_format">
+        <item>发送GIF图片</item>
+        <item>发送非GIF图片</item>
+    </string-array>
+
+    <string-array name="things_quick_search">
+        <item>关注的</item>
+        <item>我创建的</item>
+        <item>我看过的</item>
+        <item>我发过动态的</item>
+        <item>我互动过的</item>
+        <item>我参与的</item>
+    </string-array>
+
+    <string-array name="things_quick_search_value">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string name="all_msg_str">所有消息</string>
+    <string name="notice_str">公告</string>
+    <string name="checkingin_str">考勤打卡</string>
+    <string name="visitor_visible_settings">访客可见设置</string>
+    <string name="choose_avatar">选择事事号头像</string>
+    <string name="select_things_address">选择事事号所在地点</string>
+    <string name="label">标签</string>
+    <string name="add_members_try_again">请添加成员后再试!</string>
+    <string name="submit">提交</string>
+    <string name="dynamic_details">动态详情</string>
+    <string name="no_comments_dynamic_authority">暂无评论动态的权限!</string>
+    <string name="record">录音</string>
+    <string name="things_detils">事事号资料</string>
+    <string name="synchronization_other_things">同步到其它事事号</string>
+    <string name="remind_member">提醒谁看</string>
+    <string name="select_address">选择地点</string>
+    <string name="re_recording">重新录制</string>
+    <string name="recording_time_is_short">录音时间太短</string>
+    <string name="recording_failed">录音失败!</string>
+    <string name="select_things">已选择事事</string>
+    <string name="up_str">上</string>
+    <string name="down_str">下</string>
+    <string name="dynamic_search">动态搜索</string>
+    <string name="things_dynamic_search">该事事号下动态搜索</string>
+    <string name="my_dynamic_search">我的动态搜索</string>
+    <string name="prompt">提示</string>
+    <string name="is_save_draft">是否保存为草稿?</string>
+    <string name="confirm">确定</string>
+    <string name="select_file">选择文件</string>
+    <string name="selected_count_things">已选择%s个事事号</string>
+    <string name="selected_count_member">已选择%s人</string>
+    <string name="synchronization_dynamic_other_things">是否同步到这些事事号动态?</string>
+    <string name="dynamic_release_max_nine_photo">新建动态最多只能选择9张图片!</string>
+    <string name="dynamic_release_max_nine_file">新建动态最多只能选择9个文件!</string>
+    <string name="dynamic_release_single_video">新建动态最多只能拍摄一个视频!</string>
+    <string name="save_draft_success">保存草稿成功!</string>
+    <string name="things_dynamic">事事号动态</string>
+    <string name="sort">排序</string>
+    <string name="forwarding_dynamics">转发动态</string>
+    <string name="dynamic_release_onle_table">新建动态只能选择一张工作表!</string>
+    <string name="dynamic_release_max_albums">附件已达上限!</string>
+    <string name="non_company">非本公司成员</string>
+    <string name="please_enter_the_content">请输入动态内容!</string>
+    <string name="choose_things_member">选择事事成员</string>
+    <string name="please_enter_things_name">请输入事事号名称、编号等关键字</string>
+    <string name="off_line_things">离线事事</string>
+    <string name="offline_things">离线事事</string>
+    <string name="display_worktable_title">显示工作表</string>
+    <string name="check_network">无法连接服务器 请检查你的网络</string>
+    <string name="add_things">添加事事</string>
+    <string name="remove_things">删除事事</string>
+    <string name="no_praise">暂无数据!</string>
+    <string name="connection_network_retry">请连接网络后重试</string>
+    <string name="select_delete_data">请选择要删除的数据!</string>
+    <string name="confirm_delete_data">确认要删除选中的离线事事号?</string>
+    <string name="delete_success">删除成功!</string>
+    <string name="add_success">添加成功!</string>
+    <string name="forward_dynamic_other_things">转发动态到其它事事号</string>
+    <string name="confirm_that_the_dynamic_will_be_forwarded_to">确认将动态要转发到该事事号?</string>
+    <string name="shooting">拍摄中</string>
+    <string name="things_member">事事号成员</string>
+    <string name="select_member_count">已选择%s人</string>
+    <string name="select_things_count">已选择%s个事事</string>
+    <string name="isdelete_dynamic">确认删除此条动态?</string>
+    <string name="enterprise_certification">企业认证指南</string>
+    <string name="select_at_person">选择@的人</string>
+    <string name="things_privacy_settings">事事号隐私设置</string>
+    <string name="visitor_authority_setting_success">访客权限设置成功</string>
+    <string name="visitor_authority_settings">访客权限设置</string>
+    <string name="my_things">我的事</string>
+    <string name="authority_manager">权限管理</string>
+    <string name="my_release_worksheet_dynamic_statistic">我发布工作表的动态统计</string>
+    <string name="my_see_worksheet_dynamic_statistic">我查看工作表的行为统计</string>
+    <string name="dynamic_delete">该动态已经被删除!</string>
+    <string name="cancel_share">取消分享</string>
+    <string name="company_things_describe">我们正在使用事事明,工作非常方便,快快使用起来吧!</string>
+    <string name="reply_name">回复%s:</string>
+    <string name="dynamic_comment_success_no_authority_see">评论动态成功,暂无查看评论权限!</string>
+    <string name="no_authority_invitation">暂无邀请围观的权限</string>
+    <string name="success_collection">收藏成功</string>
+    <string name="cancel_collection">已取消收藏</string>
+    <string name="success_delect_dynamic">删除动态成功!</string>
+    <string name="no_forward_for_other_things">暂不能转发到其它事事号</string>
+    <string name="offline_working">离线作业</string>
+    <string name="search_company">搜索查找</string>
+    <string name="create_company_tean">创建企业/团队</string>
+
+    <string name="task_result_agree">允许施工</string>
+    <string name="task_result_pause">暂停施工</string>
+    <string name="task_result_nouser">无人作业</string>
+
+
+</resources>

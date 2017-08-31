@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+
+// load properties
+Properties localProperties = new Properties()
+localProperties.load(project.rootProject.file('config.properties').newDataInputStream())
+
+def productVersionCode = localProperties.getProperty("project.versionCode")
+def productVersionName = localProperties.getProperty("project.versionName")
+
+android {
+    compileSdkVersion Integer.parseInt(project.compileSdkVersion)
+    buildToolsVersion project.buildToolsVersion
+
+    configurations.all {
+        resolutionStrategy.force "com.google.code.findbugs:jsr305:${project.jsr305}"
+    }
+
+    defaultConfig {
+        applicationId "com.panda.panda"
+        minSdkVersion Integer.parseInt(project.minSdkVersion)
+        targetSdkVersion Integer.parseInt(project.targetSdkVersion)
+        versionCode Integer.parseInt(productVersionCode)
+        versionName productVersionName
+        testInstrumentationRunner project.testRunner
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+        }
+
+        //忽略方法数限制的检查
+        dexOptions {
+            jumboMode = true
+        }
+    }
+
+    signingConfigs {
+        release {
+
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+
+
+    signingConfigs {
+        debug {
+            storeFile file('panda.jks')
+            storePassword "123456"
+            keyAlias "panda"
+            keyPassword "123456"
+        }
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a'
+            universalApk false
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:${project.android_need_version}"
+    testCompile "junit:junit:${project.testC}"
+
+    compile "io.reactivex.rxjava2:rxandroid:${project.rxandroid_need_version}"
+    compile "io.reactivex.rxjava2:rxjava:${project.rxjava_need_version}"
+
+    compile "com.trello.rxlifecycle2:rxlifecycle:${project.rxlifecycle_need_version}"
+    compile "com.trello.rxlifecycle2:rxlifecycle-android:${project.rxlifecycle_need_version}"
+    compile "com.trello.rxlifecycle2:rxlifecycle-components:${project.rxlifecycle_need_version}"
+
+    compile "com.jakewharton:butterknife:${project.butterknife_need_version}"
+    compile "com.android.support.constraint:constraint-layout:${project.constraint_need_version}"
+    compile "com.tencent.mm.opensdk:wechat-sdk-android-with-mta:${project.wxsdk_need_version}"
+    compile "com.android.support:design:${project.android_need_version}"
+
+    compile "com.github.VictorAlbertos.RxCache:runtime:${project.rxcache_need_version}"
+    compile "com.github.VictorAlbertos.Jolyglot:gson:${project.rxcache_gson_need_version}"
+
+    compile project(':pandalibs')
+}

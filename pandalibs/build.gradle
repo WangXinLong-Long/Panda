@@ -1,0 +1,143 @@
+apply plugin: 'com.android.library'
+
+
+Properties localProperties = new Properties()
+localProperties.load(project.rootProject.file('config.properties').newDataInputStream())
+
+def productVersionCode = localProperties.getProperty("project.versionCode")
+def productVersionName = localProperties.getProperty("project.versionName")
+def productSchemaVer = localProperties.getProperty("project.schemaVersion")
+android {
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion Integer.parseInt(project.compileSdkVersion)
+    buildToolsVersion project.buildToolsVersion
+    defaultConfig {
+        minSdkVersion Integer.parseInt(project.minSdkVersion)
+        targetSdkVersion Integer.parseInt(project.targetSdkVersion)
+        versionCode Integer.parseInt(productVersionCode)
+        versionName productVersionName
+        multiDexEnabled true
+        testInstrumentationRunner project.testRunner
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+        }
+
+        //忽略方法数限制的检查
+        dexOptions {
+            jumboMode = true
+        }
+
+    }
+
+    sourceSets {
+        app {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a, armeabi'
+            universalApk false
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:${project.android_need_version}"
+    testCompile "junit:junit:${project.testC}"
+
+    //编译时注解，用于减少代码量
+    annotationProcessor "com.jakewharton:butterknife-compiler:${project.butterknife_need_version}"
+    compile "com.jakewharton:butterknife:${project.butterknife_need_version}"
+
+    //rxjava的生命周期和activity或者fragment绑定
+    compile "com.trello.rxlifecycle2:rxlifecycle:${project.rxlifecycle_need_version}"
+    compile "com.trello.rxlifecycle2:rxlifecycle-android:${project.rxlifecycle_need_version}"
+    compile "com.trello.rxlifecycle2:rxlifecycle-components:${project.rxlifecycle_need_version}"
+
+    //谷歌出品的一些库
+    compile "com.android.support:appcompat-v7:${project.android_need_version}"
+    compile "com.android.support:design:${project.android_need_version}"
+    compile "com.android.support:support-v4:${project.support_v4_version}"
+    compile "com.android.support:percent:${project.android_need_version}"
+    compile "com.android.support:recyclerview-v7:${project.android_need_version}"
+    compile "jp.wasabeef:recyclerview-animators:${project.recycleanim_need_version}"
+    compile "com.android.support:cardview-v7:${project.android_need_version}"
+    //高效的网络请求库
+    compile "com.squareup.okhttp3:okhttp:${project.okhttp_need_version}"
+    compile "com.squareup.okhttp3:okhttp-urlconnection:${project.okhttp_need_version}"
+    compile "com.squareup.okhttp3:logging-interceptor:${project.okhttp_need_version}"
+    compile "com.squareup.okio:okio:${project.okio_need_version}"
+    //第三方okhttp封装库 https://github.com/jeasonlzy/okhttp-OkGo
+    compile "com.lzy.net:okgo:${project.okGo_need_version}"
+    compile "com.lzy.net:okserver:${project.okGoServer_need_version}"
+
+    //和okhttp一起使用，可以减少代码量
+    compile "com.squareup.retrofit2:retrofit:${project.retrofit_need_version}"
+    compile "com.squareup.retrofit2:adapter-rxjava2:${project.retrofit_need_version}"
+    //gson转换器
+    compile "com.squareup.retrofit2:converter-gson:${project.retrofit_need_version}"
+
+    //标准类型转换器
+    compile "com.squareup.retrofit2:converter-scalars:${project.retrofit_need_version}"
+    //rxjava的生命周期和activity或者fragment绑定
+    compile "com.trello.rxlifecycle2:rxlifecycle:${project.rxlifecycle_need_version}"
+    compile "com.trello.rxlifecycle2:rxlifecycle-android:${project.rxlifecycle_need_version}"
+    compile "com.trello.rxlifecycle2:rxlifecycle-components:${project.rxlifecycle_need_version}"
+    //json和类互相转换工具
+    compile "com.google.code.gson:gson:${project.gson_need_version}"
+    //和lambda配合可以有效的减少代码量，也有EventBus类似功能，现阶段网络请求返回的都是Observable
+    compile "io.reactivex.rxjava2:rxandroid:${project.rxandroid_need_version}"
+    compile "io.reactivex.rxjava2:rxjava:${project.rxjava_need_version}"
+    //RxCache 缓存
+    compile "com.github.VictorAlbertos.RxCache:runtime:${project.rxcache_need_version}"
+    compile "com.github.VictorAlbertos.Jolyglot:gson:${project.rxcache_gson_need_version}"
+
+    //图片家族库
+    compile "com.github.bumptech.glide:glide:${project.glide_need_version}"
+    compile "com.github.bumptech.glide:okhttp3-integration:${project.okGlide_need_version}"
+    compile "jp.wasabeef:glide-transformations:${project.glideAnim_need_version}"
+    compile "jp.co.cyberagent.android.gpuimage:gpuimage-library:${project.gpuimage_need_version}"
+
+    //nb的编译时注解，数据库
+    compile "org.greenrobot:greendao:${project.greenDAO_need_version}"
+    compile "org.greenrobot:greendao-generator:${project.greenDAO_need_version}"
+    compile "com.wang.avi:library:${project.avilib_need_version}"
+    //带下拉刷新的recyclerView https://github.com/dinuscxj/RecyclerRefreshLayout
+    compile "com.dinuscxj:recyclerrefreshlayout:${project.recRefLayout_need_version}"
+    //页面跳转 图片移动动画
+    compile "com.kogitune:pre-lollipop-activity-transition:${project.actvityTr_need_version}"
+    //引导页库 https://github.com/Cleveroad/slidingtutorial-android
+    compile "com.cleveroad:slidingtutorial:${project.sliding_need_version}"
+    //tablayout https://github.com/H07000223/FlycoTabLayout
+    compile "com.flyco.tablayout:FlycoTabLayout_Lib:${project.flycotab_need_version}"
+    //环信
+    compile "com.hyphenate:hyphenate-sdk:${project.easemob_need_version}"
+
+    //二维码 https://github.com/bingoogolapple/BGAQRCode-Android
+    compile "com.google.zxing:core:${project.zxing_need_version}"
+    compile "cn.bingoogolapple:bga-qrcodecore:${project.qrcode_need_version}"
+    compile "cn.bingoogolapple:bga-zbar:${project.qrcode_need_version}"
+    compile "cn.bingoogolapple:bga-zxing:${project.qrcode_need_version}"
+
+    //圆形进度条
+    compile "com.dinuscxj:circleprogressbar:${project.circle_progress_need_version}"
+    //日期选择器 https://github.com/k0shk0sh/RetainedDateTimePickers
+    compile "com.github.k0shk0sh:RetainedDateTimePickers:${project.datepicker_need_version}"
+}
