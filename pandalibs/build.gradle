@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.jakewharton.butterknife'
 
 Properties localProperties = new Properties()
 localProperties.load(project.rootProject.file('config.properties').newDataInputStream())

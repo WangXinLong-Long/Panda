@@ -10,8 +10,10 @@ import com.panda.mvp.contract.login.SplashActivityContract;
 import com.panda.mvp.presenter.login.SplashActivityPresenter;
 import com.panda.pandalibs.base.mvp.ui.BaseActivity;
 
+import butterknife.BindView;
+
 public class SplashActivityActivity extends BaseActivity<SplashActivityPresenter> implements SplashActivityContract.View {
-    //    @BindView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
     @Override
@@ -30,7 +32,7 @@ public class SplashActivityActivity extends BaseActivity<SplashActivityPresenter
 
     @Override
     protected void init(Bundle savedInstanceState) {
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+//        mToolbar = (Toolbar) findViewById(R.id.toolbar);
         userToolbar(mToolbar, "测试");
     }
 

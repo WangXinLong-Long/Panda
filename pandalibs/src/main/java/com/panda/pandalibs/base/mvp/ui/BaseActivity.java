@@ -29,6 +29,31 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends RxAppCom
     private P mPresenter;
     private WeakHandler mWeakHandler;
     private boolean mIsNeedAdapterPhone = true;
+    private boolean mIsNeedGoneNavigationBar;
+
+    protected Runnable mHideRunnable = new Runnable() {
+        @Override
+        public void run() {
+            getWindow().getDecorView().setSystemUiVisibility(getHideFlags());
+        }
+    };
+
+    private int getHideFlags() {
+        int flags = 0;
+        int curApiVersion = Build.VERSION.SDK_INT;
+        if (curApiVersion >= Build.VERSION_CODES.KITKAT) {
+//            flags = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|
+        }
+        return flags;
+    }
+
+    public boolean ismIsNeedGoneNavigationBar() {
+        return mIsNeedGoneNavigationBar;
+    }
+
+    public void setmIsNeedGoneNavigationBar(boolean mIsNeedGoneNavigationBar) {
+        this.mIsNeedGoneNavigationBar = mIsNeedGoneNavigationBar;
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,19 +89,27 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends RxAppCom
             android4Adapter();
         }
 
+        if (mIsNeedGoneNavigationBar) {
+            toHideNv();
+        }
+
+    }
+
+    private void toHideNv() {
+        mWeakHandler.post(mHideRunnable);
     }
 
     private void android4Adapter() {
 //                                                                                                           coordinatorLayout
         CoordinatorLayout coordinatorLayout = (CoordinatorLayout) findViewById(getResources().getIdentifier("coordinatorLayout", "id", getPackageName()));
-        if (coordinatorLayout!=null&&coordinatorLayout.getChildCount()>0){
-            if (coordinatorLayout.getChildAt(0) instanceof AppBarLayout){
+        if (coordinatorLayout != null && coordinatorLayout.getChildCount() > 0) {
+            if (coordinatorLayout.getChildAt(0) instanceof AppBarLayout) {
                 AppBarLayout appBarLayout = (AppBarLayout) coordinatorLayout.getChildAt(0);
 
-                if (appBarLayout.getChildCount()>0&&appBarLayout.getChildAt(0) instanceof Toolbar){
+                if (appBarLayout.getChildCount() > 0 && appBarLayout.getChildAt(0) instanceof Toolbar) {
                     Toolbar toolbar = (Toolbar) appBarLayout.getChildAt(0);
                     AppBarLayout.LayoutParams lp = ((AppBarLayout.LayoutParams) toolbar.getLayoutParams());
-                    lp.setMargins(0, Util.getTop(this),0,0);
+                    lp.setMargins(0, Util.getTop(this), 0, 0);
                     toolbar.setLayoutParams(lp);
                 }
             }

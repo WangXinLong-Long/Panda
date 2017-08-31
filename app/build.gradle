@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'me.tatarka.retrolambda'
 // load properties
 Properties localProperties = new Properties()
 localProperties.load(project.rootProject.file('config.properties').newDataInputStream())
@@ -89,6 +90,8 @@ dependencies {
     compile "com.trello.rxlifecycle2:rxlifecycle-components:${project.rxlifecycle_need_version}"
 
     compile "com.jakewharton:butterknife:${project.butterknife_need_version}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${project.butterknife_need_version}"
+
     compile "com.android.support.constraint:constraint-layout:${project.constraint_need_version}"
     compile "com.tencent.mm.opensdk:wechat-sdk-android-with-mta:${project.wxsdk_need_version}"
     compile "com.android.support:design:${project.android_need_version}"
