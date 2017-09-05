@@ -39,10 +39,12 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends RxAppCom
     };
 
     private int getHideFlags() {
-        int flags = 0;
+        int flags ;
         int curApiVersion = Build.VERSION.SDK_INT;
         if (curApiVersion >= Build.VERSION_CODES.KITKAT) {
-//            flags = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|
+            flags = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE;
+        } else {
+            flags = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
         }
         return flags;
     }
@@ -97,6 +99,13 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends RxAppCom
 
     private void toHideNv() {
         mWeakHandler.post(mHideRunnable);
+        final View decorView = getWindow().getDecorView();
+        decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+            @Override
+            public void onSystemUiVisibilityChange(int visibility) {
+                mWeakHandler.post(mHideRunnable);
+            }
+        });
     }
 
     private void android4Adapter() {
@@ -127,7 +136,7 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends RxAppCom
     protected abstract P createPresenter();
 
 
-    private void before() {
+    protected void before() {
         application = (App) getApplication();
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }

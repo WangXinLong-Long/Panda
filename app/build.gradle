@@ -8,9 +8,15 @@ localProperties.load(project.rootProject.file('config.properties').newDataInputS
 def productVersionCode = localProperties.getProperty("project.versionCode")
 def productVersionName = localProperties.getProperty("project.versionName")
 
+def developEaseKey = localProperties.getProperty("develop.easemobId")
 android {
     compileSdkVersion Integer.parseInt(project.compileSdkVersion)
     buildToolsVersion project.buildToolsVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     configurations.all {
         resolutionStrategy.force "com.google.code.findbugs:jsr305:${project.jsr305}"
@@ -23,7 +29,11 @@ android {
         versionCode Integer.parseInt(productVersionCode)
         versionName productVersionName
         testInstrumentationRunner project.testRunner
-
+        manifestPlaceholders = [VERSION_CODE  : Integer.parseInt(productVersionCode),
+                                VERSION_NAME  : productVersionName,
+                                DATABASE_NAME : project.databaseName,
+                                DATABASE_VER  : Integer.parseInt(project.databaseVer),
+                                EASEMOB_APPKEY: developEaseKey]
         ndk {
             //设置支持的SO库架构
             abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"

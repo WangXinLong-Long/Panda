@@ -89,16 +89,18 @@
     <!-- 读取短信 -->
     <uses-permission android:name="android.permission.READ_SMS" />
 
-
     <application
         android:name=".pandalibs.App"
         android:allowBackup="true"
         android:icon="@drawable/panda"
-        android:label="@string/app_name">
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
         <!-- 设置环信应用的AppKey -->
-        <!--<meta-data
+        <meta-data
             android:name="EASEMOB_APPKEY"
-            android:value="${EASEMOB_APPKEY}" />-->
+            android:value="1195170822115048#panda" />
+
         <!-- 登录 -->
         <activity
             android:name=".mvp.ui.login.LoginActivityActivity"
@@ -114,6 +116,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 消息 -->
+        <activity
+            android:name=".mvp.ui.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- 视频对话 -->
+        <activity
+            android:name=".mvp.ui.conversation.VideoCallActivity"
+            android:screenOrientation="portrait" />
+        <!-- 语音通话 -->
+        <activity
+            android:name=".mvp.ui.conversation.VoiceCallActivity"
+            android:screenOrientation="portrait" />
+        <!-- 注册 -->
+        <activity
+            android:name=".mvp.ui.login.RegisterActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

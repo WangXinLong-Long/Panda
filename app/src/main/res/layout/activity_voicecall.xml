@@ -6,14 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.panda.mvp.ui.login.SplashActivityActivity">
+    tools:context="com.panda.mvp.ui.conversation.VoiceCallActivity">
 
+    <include layout="@layout/include_toolbar" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-  <ImageView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:src="@drawable/panda"
-      />
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

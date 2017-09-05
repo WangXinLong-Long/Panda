@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'me.tatarka.retrolambda'
 
 Properties localProperties = new Properties()
 localProperties.load(project.rootProject.file('config.properties').newDataInputStream())

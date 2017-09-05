@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:mcontext="com.panda.mvp.ui.login.LoginActivityActivity">
+    tools:context="com.panda.mvp.ui.login.RegisterActivity">
 
     <include layout="@layout/include_toolbar" />
 
@@ -19,7 +19,6 @@
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
             android:hint="用户名" />
 
         <EditText
@@ -27,26 +26,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/name"
-            android:maxLines="1"
             android:hint="密码" />
 
-        <Button
-            android:id="@+id/login"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/re_password"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/password"
+            android:hint="密码确认" />
+
+        <Button
+            android:id="@+id/regist_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="登录" />
-
-        <Button
-            android:id="@+id/regist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/password"
-            android:layout_toRightOf="@id/login"
+            android:layout_below="@id/re_password"
             android:text="注册" />
-
-
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

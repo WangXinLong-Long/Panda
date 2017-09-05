@@ -347,6 +347,7 @@
     <string name="task_result_agree">允许施工</string>
     <string name="task_result_pause">暂停施工</string>
     <string name="task_result_nouser">无人作业</string>
-
+    <string name="User_name_cannot_be_empty">用户名不能为空！</string>
+    <string name="Password_cannot_be_empty">密码不能为空！</string>
 
 </resources>
