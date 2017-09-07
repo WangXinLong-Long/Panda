@@ -1,0 +1,148 @@
+# view res/layout/ease_emojicon.xml #generated:9
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view res/layout/abc_alert_dialog_material.xml #generated:41
+-keep class android.support.v4.widget.NestedScrollView { <init>(...); }
+
+# view res/layout/abc_alert_dialog_button_bar_material.xml #generated:43
+# view res/layout/abc_alert_dialog_material.xml #generated:52
+# view res/layout/abc_alert_dialog_material.xml #generated:66
+# view res/layout/abc_alert_dialog_title_material.xml #generated:56
+-keep class android.support.v4.widget.Space { <init>(...); }
+
+# view res/layout/ease_chat_message_list.xml #generated:6
+-keep class android.support.v4.widget.SwipeRefreshLayout { <init>(...); }
+
+# view res/layout/abc_select_dialog_material.xml #generated:23
+-keep class android.support.v7.app.AlertController$RecycleListView { <init>(...); }
+
+# view res/layout/abc_action_menu_item_layout.xml #generated:17
+-keep class android.support.v7.view.menu.ActionMenuItemView { <init>(...); }
+
+# view res/layout/abc_expanded_menu_layout.xml #generated:17
+-keep class android.support.v7.view.menu.ExpandedMenuView { <init>(...); }
+
+# view res/layout/abc_list_menu_item_layout.xml #generated:17
+# view res/layout/abc_popup_menu_item_layout.xml #generated:17
+-keep class android.support.v7.view.menu.ListMenuItemView { <init>(...); }
+
+# view res/layout/abc_screen_toolbar.xml #generated:27
+-keep class android.support.v7.widget.ActionBarContainer { <init>(...); }
+
+# view res/layout/abc_action_mode_bar.xml #generated:19
+# view res/layout/abc_screen_toolbar.xml #generated:43
+-keep class android.support.v7.widget.ActionBarContextView { <init>(...); }
+
+# view res/layout/abc_screen_toolbar.xml #generated:17
+-keep class android.support.v7.widget.ActionBarOverlayLayout { <init>(...); }
+
+# view res/layout/abc_action_menu_layout.xml #generated:17
+-keep class android.support.v7.widget.ActionMenuView { <init>(...); }
+
+# view res/layout/abc_activity_chooser_view.xml #generated:19
+-keep class android.support.v7.widget.ActivityChooserView$InnerLayout { <init>(...); }
+
+# view res/layout/abc_alert_dialog_material.xml #generated:18
+-keep class android.support.v7.widget.AlertDialogLayout { <init>(...); }
+
+# view res/layout/abc_alert_dialog_button_bar_material.xml #generated:26
+-keep class android.support.v7.widget.ButtonBarLayout { <init>(...); }
+
+# view res/layout/abc_screen_content_include.xml #generated:19
+-keep class android.support.v7.widget.ContentFrameLayout { <init>(...); }
+
+# view res/layout/abc_alert_dialog_title_material.xml #generated:45
+-keep class android.support.v7.widget.DialogTitle { <init>(...); }
+
+# view res/layout/abc_screen_simple_overlay_action_mode.xml #generated:23
+-keep class android.support.v7.widget.FitWindowsFrameLayout { <init>(...); }
+
+# view res/layout/abc_dialog_title_material.xml #generated:22
+# view res/layout/abc_screen_simple.xml #generated:17
+-keep class android.support.v7.widget.FitWindowsLinearLayout { <init>(...); }
+
+# view res/layout/abc_search_view.xml #generated:75
+-keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# view res/layout/abc_screen_toolbar.xml #generated:36
+-keep class android.support.v7.widget.Toolbar { <init>(...); }
+
+# view res/layout/abc_screen_simple.xml #generated:25
+# view res/layout/abc_screen_simple_overlay_action_mode.xml #generated:32
+-keep class android.support.v7.widget.ViewStubCompat { <init>(...); }
+
+# view res/layout/ease_activity_baidumap.xml #generated:43
+-keep class com.baidu.mapapi.map.MapView { <init>(...); }
+
+# view res/layout/ease_widget_chat_input_menu.xml #generated:29
+-keep class com.hyphenate.easeui.widget.EaseChatExtendMenu { <init>(...); }
+
+# view res/layout/ease_fragment_chat.xml #generated:34
+-keep class com.hyphenate.easeui.widget.EaseChatInputMenu { <init>(...); }
+
+# view res/layout/ease_fragment_chat.xml #generated:21
+-keep class com.hyphenate.easeui.widget.EaseChatMessageList { <init>(...); }
+
+# view res/layout/ease_layout_chat_primary_menu.xml #generated:2
+-keep class com.hyphenate.easeui.widget.EaseChatPrimaryMenu { <init>(...); }
+
+# view res/layout/ease_fragment_contact_list.xml #generated:24
+-keep class com.hyphenate.easeui.widget.EaseContactList { <init>(...); }
+
+# view res/layout/ease_fragment_conversation_list.xml #generated:26
+-keep class com.hyphenate.easeui.widget.EaseConversationList { <init>(...); }
+
+# view res/layout/ease_row_chat_history.xml #generated:15
+# view res/layout/ease_row_contact.xml #generated:26
+# view res/layout/ease_row_received_bigexpression.xml #generated:20
+# view res/layout/ease_row_received_file.xml #generated:21
+# view res/layout/ease_row_received_location.xml #generated:20
+# view res/layout/ease_row_received_message.xml #generated:20
+# view res/layout/ease_row_received_picture.xml #generated:21
+# view res/layout/ease_row_received_video.xml #generated:20
+# view res/layout/ease_row_received_video_call.xml #generated:20
+# view res/layout/ease_row_received_voice.xml #generated:21
+# view res/layout/ease_row_received_voice_call.xml #generated:20
+# view res/layout/ease_row_sent_bigexpression.xml #generated:20
+# view res/layout/ease_row_sent_file.xml #generated:22
+# view res/layout/ease_row_sent_location.xml #generated:20
+# view res/layout/ease_row_sent_message.xml #generated:20
+# view res/layout/ease_row_sent_picture.xml #generated:21
+# view res/layout/ease_row_sent_video.xml #generated:21
+# view res/layout/ease_row_sent_video_call.xml #generated:20
+# view res/layout/ease_row_sent_voice.xml #generated:20
+# view res/layout/ease_row_sent_voice_call.xml #generated:20
+-keep class com.hyphenate.easeui.widget.EaseImageView { <init>(...); }
+
+# view res/layout/ease_widget_contact_list.xml #generated:17
+-keep class com.hyphenate.easeui.widget.EaseSidebar { <init>(...); }
+
+# view res/layout/ease_fragment_chat.xml #generated:9
+# view res/layout/ease_fragment_contact_list.xml #generated:9
+# view res/layout/ease_fragment_conversation_list.xml #generated:9
+-keep class com.hyphenate.easeui.widget.EaseTitleBar { <init>(...); }
+
+# view res/layout/ease_fragment_chat.xml #generated:26
+-keep class com.hyphenate.easeui.widget.EaseVoiceRecorderView { <init>(...); }
+
+# view res/layout/ease_widget_emojicon.xml #generated:15
+-keep class com.hyphenate.easeui.widget.emojicon.EaseEmojiconIndicatorView { <init>(...); }
+
+# view res/layout/ease_layout_emojicon_menu.xml #generated:2
+-keep class com.hyphenate.easeui.widget.emojicon.EaseEmojiconMenu { <init>(...); }
+
+# view res/layout/ease_widget_emojicon.xml #generated:9
+-keep class com.hyphenate.easeui.widget.emojicon.EaseEmojiconPagerView { <init>(...); }
+
+# view res/layout/ease_widget_emojicon.xml #generated:28
+-keep class com.hyphenate.easeui.widget.emojicon.EaseEmojiconScrollTabBar { <init>(...); }
+
+# view res/layout/ease_activity_show_big_image.xml #generated:8
+-keep class com.hyphenate.easeui.widget.photoview.EasePhotoView { <init>(...); }
+
+# onClick res/layout/ease_commom_back_btn.xml #generated:2
+-keepclassmembers class * { *** back(...); }
+
+# onClick res/layout/ease_activity_baidumap.xml #generated:28
+-keepclassmembers class * { *** sendLocation(...); }
+

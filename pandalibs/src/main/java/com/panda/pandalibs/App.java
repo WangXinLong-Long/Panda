@@ -6,8 +6,6 @@ import android.content.Context;
 import android.os.Process;
 import android.support.multidex.MultiDexApplication;
 
-import com.panda.pandalibs.utils.utils.IMClient;
-
 import java.util.Iterator;
 import java.util.List;
 
@@ -36,7 +34,8 @@ public class App extends MultiDexApplication {
         if (processAppName == null ) {
             return;
         }
-        IMClient.imInit(this);
+        PandaHelper.getInstance().init(context);
+
     }
     /**
      * 根据Pid获取当前进程的名字，一般就是当前app的包名

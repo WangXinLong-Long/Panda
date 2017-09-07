@@ -4,7 +4,7 @@
     package="com.panda.pandalibs">
 
     <application
-        android:name=".App"
+        android:name="com.panda.pandalibs.App"
         android:allowBackup="true"
         android:label="@string/app_name"
         android:supportsRtl="true">

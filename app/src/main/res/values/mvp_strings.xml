@@ -6,4 +6,5 @@
     <string name="videocall_toolbar_title">视频对话</string>
     <string name="voicecall_toolbar_title">语音通话</string>
     <string name="register_toolbar_title">注册</string>
+    <string name="test_toolbar_title">测试</string>
 </resources>

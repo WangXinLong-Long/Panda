@@ -132,6 +132,10 @@
         <activity
             android:name=".mvp.ui.login.RegisterActivity"
             android:screenOrientation="portrait" />
+        <!-- 测试 -->
+        <activity
+            android:name=".mvp.ui.test.TestActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

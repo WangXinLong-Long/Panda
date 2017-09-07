@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "G:\\csdn\\Panda\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\DELL\\.android\\build-cache\\94851ab8a403a33dcecb8e4c2fff50ea87c4cfa0\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "G:\\csdn\\Panda\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\DELL\\.android\\build-cache\\94851ab8a403a33dcecb8e4c2fff50ea87c4cfa0\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "G:\\csdn\\Panda\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\DELL\\.android\\build-cache\\94851ab8a403a33dcecb8e4c2fff50ea87c4cfa0\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "G:\\csdn\\Panda\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\DELL\\.android\\build-cache\\94851ab8a403a33dcecb8e4c2fff50ea87c4cfa0\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    }
+]

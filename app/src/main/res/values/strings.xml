@@ -349,5 +349,5 @@
     <string name="task_result_nouser">无人作业</string>
     <string name="User_name_cannot_be_empty">用户名不能为空！</string>
     <string name="Password_cannot_be_empty">密码不能为空！</string>
-
+    <string name="Is_the_registered">正在注册……</string>
 </resources>
