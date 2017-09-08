@@ -14,29 +14,20 @@ import android.widget.Scroller;
  */
 
 public class ScrollViewCustom extends ViewGroup {
-    private Scroller scroller;
 
-    //    判断拖动的最小移动像素数
-    private int mTouchSlop;
-
-    //    左右边界
-    private int leftBorder;
-    private int rightBorder;
-
-    //    手指按下时的屏幕坐标
-    private float mXDown;
-
-    //    手指当时所处的屏幕坐标
-    private float mXMOve;
-
-    //    上次触发ACTION_MOVE事件时的屏幕坐标
-    private float mXLastMove;
+    Scroller scroller;
+    private int touchSlop;
+    private int boderLeft;
+    private int boderRight;
+    private float mDownX;
+    private float mLastMoveX;
+    private float mMoveX;
 
     public ScrollViewCustom(Context context, AttributeSet attrs) {
         super(context, attrs);
         scroller = new Scroller(context);
         ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
-        mTouchSlop = ViewConfigurationCompat.getScaledPagingTouchSlop(viewConfiguration);
+        touchSlop = ViewConfigurationCompat.getScaledPagingTouchSlop(viewConfiguration);
     }
 
     @Override
@@ -47,58 +38,75 @@ public class ScrollViewCustom extends ViewGroup {
             View childView = getChildAt(i);
             measureChild(childView, widthMeasureSpec, heightMeasureSpec);
         }
+
     }
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        if (changed) {
-            int childCount = getChildCount();
-            for (int i = 0; i < childCount; i++) {
-                View childView = getChildAt(i);
-                childView.layout(i * childView.getMeasuredWidth(), 0, (i + 1) * childView.getMeasuredWidth(), childView.getMeasuredHeight());
-            }
-            leftBorder = getChildAt(0).getLeft();
-            rightBorder = getChildAt(childCount - 1).getRight();
+        int childCount = getChildCount();
+        for (int i = 0; i < childCount; i++) {
+            View childView = getChildAt(i);
+            childView.layout(i * childView.getMeasuredWidth(), 0, (i + 1) * childView.getMeasuredWidth(), childView.getMeasuredHeight());
         }
+        boderLeft = getChildAt(0).getLeft();
+        boderRight = getChildAt(childCount - 1).getRight();
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN: {
-                mXDown = ev.getRawX();
-                mXLastMove = mXDown;
+                mDownX = ev.getRawX();
+                mLastMoveX = mDownX;
             }
             break;
             case MotionEvent.ACTION_MOVE: {
-                mXMOve = ev.getRawX();
-                float diff = Math.abs(mXMOve - mXDown);
-                mXLastMove = mXMOve;
-                if (diff > mTouchSlop) {
+                mMoveX = ev.getRawX();
+                float diff = Math.abs(mMoveX - mLastMoveX);
+                mLastMoveX = mMoveX;
+                if (diff > touchSlop) {
                     return true;
                 }
             }
             break;
         }
         return super.onInterceptTouchEvent(ev);
-
     }
-
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_MOVE: {
-                mXMOve = event.getRawX();
-                int scrolledX = (int) (mXLastMove - mXMOve);
+                mMoveX = event.getRawX();
+                int scolledX = (int) (mLastMoveX - mMoveX);
+                if (getScrollX() + scolledX < boderLeft) {
+                    scrollTo(boderLeft, 0);
+                    return true;
+                } else if (getScrollX() + getWidth() + scolledX > boderRight) {
+                    scrollTo(boderRight - getWidth(), 0);
+                    return true;
+                }
+                scrollBy(scolledX, 0);
+                mLastMoveX = mMoveX;
             }
             break;
-            case MotionEvent.ACTION_DOWN: {
-
+            case MotionEvent.ACTION_UP: {
+                int index = (getScrollX() + getWidth() / 2) / getWidth();
+                int dx = index * getWidth() - getScrollX();
+                scroller.startScroll(getScrollX(),0,dx,0);
+                invalidate();
             }
             break;
         }
         return super.onTouchEvent(event);
+    }
 
+    @Override
+    public void computeScroll() {
+        super.computeScroll();
+        if (scroller.computeScrollOffset()){
+            scrollTo(scroller.getCurrX(),scroller.getCurrY());
+            invalidate();
+        }
     }
 }
