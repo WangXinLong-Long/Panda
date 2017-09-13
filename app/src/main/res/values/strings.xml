@@ -306,6 +306,7 @@
     <string name="offline_things">离线事事</string>
     <string name="display_worktable_title">显示工作表</string>
     <string name="check_network">无法连接服务器 请检查你的网络</string>
+    <string name="Is_landing">正在登录……</string>
     <string name="add_things">添加事事</string>
     <string name="remove_things">删除事事</string>
     <string name="no_praise">暂无数据!</string>

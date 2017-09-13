@@ -19,16 +19,16 @@
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:hint="用户名" />
+            android:hint="用户名"
+            android:maxLines="1" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/name"
-            android:maxLines="1"
-            android:hint="密码" />
+            android:hint="密码"
+            android:maxLines="1" />
 
         <Button
             android:id="@+id/login"
@@ -45,6 +45,14 @@
             android:layout_below="@id/password"
             android:layout_toRightOf="@id/login"
             android:text="注册" />
+
+        <Button
+            android:id="@+id/test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_toRightOf="@id/regist"
+            android:text="test" />
 
 
     </RelativeLayout>

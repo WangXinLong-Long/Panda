@@ -1,21 +1,28 @@
 package com.panda.mvp.ui.login;
 
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.panda.R;
 import com.panda.mvp.contract.login.LoginActivityContract;
 import com.panda.mvp.presenter.login.LoginActivityPresenter;
 import com.panda.mvp.ui.test.TestActivity;
 import com.panda.pandalibs.base.mvp.ui.BaseActivity;
+import com.panda.pandalibs.utils.net.NetUtils;
+import com.panda.pandalibs.utils.utils.tools.PTo;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -35,8 +42,10 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
 
     @BindView(R.id.regist)
     Button regist;
+@BindView(R.id.test)
+    Button test;
 
-
+    boolean progressShow ;
     @Override
     protected void after() {
         super.after();
@@ -65,7 +74,7 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.login: {
-//                logining();
+                logining();
             }
             break;
             case R.id.regist: {
@@ -88,13 +97,14 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
         return super.onOptionsItemSelected(item);
     }
 
-    /*private void logining() {
-        if (!EaseCommonUtils.isNetWorkConnected(this)) {
-            Toast.makeText(this, R.string.network_isnot_available, Toast.LENGTH_SHORT).show();
+    private void logining() {
+        if (NetUtils.isNoNetState()) {
+            PTo.get().show(this,R.string.check_network);
+//            Toast.makeText(this, R.string.network_isnot_available, Toast.LENGTH_SHORT).show();
             return;
         }
-        String currentUsername = usernameEditText.getText().toString().trim();
-        String currentPassword = passwordEditText.getText().toString().trim();
+        String currentUsername = name.getText().toString().trim();
+        String currentPassword = password.getText().toString().trim();
 
         if (TextUtils.isEmpty(currentUsername)) {
             Toast.makeText(this, R.string.User_name_cannot_be_empty, Toast.LENGTH_SHORT).show();
@@ -106,7 +116,7 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
         }
 
         progressShow = true;
-        final ProgressDialog pd = new ProgressDialog(LoginActivity.this);
+        final ProgressDialog pd = new ProgressDialog(this);
         pd.setCanceledOnTouchOutside(false);
         pd.setOnCancelListener(new DialogInterface.OnCancelListener() {
 
@@ -118,6 +128,7 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
         });
         pd.setMessage(getString(R.string.Is_landing));
         pd.show();
-    }*/
+    }
 
+    private static final String TAG = "LoginActivityActivity";
 }

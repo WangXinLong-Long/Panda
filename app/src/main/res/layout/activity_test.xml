@@ -15,26 +15,50 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <com.panda.weight.ScrollViewCustom
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.panda.weight.ScrollViewCustom
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:onClick="onClick"
+                    android:text="第一个" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:text="第二个" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:text="第三个" />
+
+            </com.panda.weight.ScrollViewCustom>
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:text="第一个" />
+                android:id="@+id/ball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scroll_view"
+                android:text="动画" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:text="第二个" />
+                android:id="@+id/turn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="turn"
+                android:layout_below="@id/scroll_view"
+                android:text="跳转" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:text="第三个" />
-
-        </com.panda.weight.ScrollViewCustom>
+        </LinearLayout>
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

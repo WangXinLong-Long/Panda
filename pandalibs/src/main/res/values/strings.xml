@@ -609,7 +609,7 @@
     <string name="leave_word_str">留言</string>
     <string name="sending_str">发送中…</string>
     <string name="please_download_to_share_str">请先点击下载文件后，再进行分享</string>
-
+    <string name="network_isnot_available">网络不可用</string>
     <string-array name="face_more_item_str">
         <item>图片</item>
         <item>拍照</item>
