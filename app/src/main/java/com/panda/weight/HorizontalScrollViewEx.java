@@ -110,9 +110,9 @@ public class HorizontalScrollViewEx extends ViewGroup {
                 } else {
                     mChildrenIndex = (scrollX + mChildrenWidth / 2) / mChildrenWidth;
                 }
-                mChildrenIndex = Math.max(0,Math.min(mChildrenIndex,mChildrenSize));
+                mChildrenIndex = Math.max(0, Math.min(mChildrenIndex, mChildrenSize));
                 int dx = mChildrenIndex * mChildrenWidth - scrollX;
-                smoothScrollBy(dx,0);
+                smoothScrollBy(dx, 0);
                 tracker.clear();
             }
             break;
@@ -127,20 +127,23 @@ public class HorizontalScrollViewEx extends ViewGroup {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int measureWidth = 0;
-        int measuewHeight = 0;
+        int measuredWidth = 0;
+        int measuredHeight = 0;
         int childCount = getChildCount();
-        measureChildren(widthMeasureSpec, heightMeasureSpec);
-        int widthSpecSize = MeasureSpec.getSize(widthMeasureSpec);
-        int widthSpecMode = MeasureSpec.getMode(widthMeasureSpec);
-        int heightSpecSize = MeasureSpec.getSize(heightMeasureSpec);
-        int heightSpecMode = MeasureSpec.getMode(heightMeasureSpec);
+        measureChildren(widthMeasureSpec,heightMeasureSpec);
+
+        int widthSpaceSize = MeasureSpec.getSize(widthMeasureSpec);
+        int widthSpaceMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heighSpaceSize = MeasureSpec.getSize(heightMeasureSpec);
+        int heighSpaceMode = MeasureSpec.getMode(heightMeasureSpec);
         if (childCount == 0){
             setMeasuredDimension(0,0);
-        }else if (heightSpecMode == MeasureSpec.AT_MOST){
+        }else if (heighSpaceMode == MeasureSpec.AT_MOST){
             View childView = getChildAt(0);
-            measuewHeight = childView.getMeasuredHeight();
-            setMeasuredDimension(widthMeasureSpec,childView.getMeasuredWidth());
+        }else if (widthSpaceMode == MeasureSpec.AT_MOST){
+
+        }else {
+
         }
     }
 
@@ -151,6 +154,33 @@ public class HorizontalScrollViewEx extends ViewGroup {
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        int childLeft = 0;
+        int childCount = getChildCount();
+        mChildrenSize = childCount;
+        for (int i = 0; i < childCount; i++) {
+            View childView = getChildAt(i);
+            if (childView.getVisibility() != View.GONE) {
+                int childWidth = childView.getMeasuredWidth();
+                mChildrenWidth = childWidth;
+                childView.layout(childLeft, 0, childLeft + childWidth, childView.getMeasuredHeight());
+                childLeft += childWidth;
+            }
+        }
+    }
+
+    @Override
+    public void computeScroll() {
+        super.computeScroll();
+        if (scroller.computeScrollOffset()) {
+            scrollTo(scroller.getCurrX(), scroller.getCurrY());
+            postInvalidate();
+        }
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        tracker.recycle();
+        super.onDetachedFromWindow();
 
     }
 }
