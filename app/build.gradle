@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
 apply plugin: 'me.tatarka.retrolambda'
+//添加如下代码，应用apt插件
+apply plugin: 'com.neenbedankt.android-apt'
 // load properties
 Properties localProperties = new Properties()
 localProperties.load(project.rootProject.file('config.properties').newDataInputStream())
@@ -108,6 +110,10 @@ dependencies {
 
     compile "com.github.VictorAlbertos.RxCache:runtime:${project.rxcache_need_version}"
     compile "com.github.VictorAlbertos.Jolyglot:gson:${project.rxcache_gson_need_version}"
+    compile 'com.google.dagger:dagger:2.4'
+    apt 'com.google.dagger:dagger-compiler:2.4'
+    //java注解
+    compile 'org.glassfish:javax.annotation:10.0-b28'
 
     compile project(':pandalibs')
 }

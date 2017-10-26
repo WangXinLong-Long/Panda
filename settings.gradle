@@ -1,1 +1,1 @@
-include ':app', ':pandalibs'
+include ':app', ':pandalibs', ':testlib'

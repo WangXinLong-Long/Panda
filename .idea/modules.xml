@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Panda.iml" filepath="$PROJECT_DIR$/Panda.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/pandalibs/pandalibs.iml" filepath="$PROJECT_DIR$/pandalibs/pandalibs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testlib/testlib.iml" filepath="$PROJECT_DIR$/testlib/testlib.iml" />
     </modules>
   </component>
 </project>

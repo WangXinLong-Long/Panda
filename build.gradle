@@ -15,6 +15,9 @@ buildscript {
         classpath "com.jakewharton:butterknife-gradle-plugin:${project.butterknife_need_version}"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:2.1.0'
+        //添加apt插件
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
 }
 
