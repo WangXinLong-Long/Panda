@@ -69,6 +69,8 @@ public class ScrollViewCustom extends ViewGroup {
                 }
             }
             break;
+            default:
+                break;
         }
         return super.onInterceptTouchEvent(ev);
     }
@@ -97,6 +99,8 @@ public class ScrollViewCustom extends ViewGroup {
                 invalidate();
             }
             break;
+            default:
+                break;
         }
         return super.onTouchEvent(event);
     }

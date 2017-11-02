@@ -42,10 +42,12 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
 
     @BindView(R.id.regist)
     Button regist;
-@BindView(R.id.test)
+
+    @BindView(R.id.test)
     Button test;
 
-    boolean progressShow ;
+    boolean progressShow;
+
     @Override
     protected void after() {
         super.after();
@@ -81,6 +83,8 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
                 startActivityForResult(new Intent(this, RegisterActivity.class), 0);
             }
             break;
+            default:
+                break;
         }
     }
 
@@ -99,8 +103,7 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
 
     private void logining() {
         if (NetUtils.isNoNetState()) {
-            PTo.get().show(this,R.string.check_network);
-//            Toast.makeText(this, R.string.network_isnot_available, Toast.LENGTH_SHORT).show();
+            PTo.get().show(this, R.string.check_network);
             return;
         }
         String currentUsername = name.getText().toString().trim();

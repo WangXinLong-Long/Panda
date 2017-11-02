@@ -29,16 +29,28 @@ public class ProxyFactoryBean {
         this.targe = targe;
     }
 
-    public Object getProxy(){
-       return Proxy.newProxyInstance(targe.getClass().getClassLoader(), targe.getClass().getInterfaces(), new InvocationHandler() {
+  public Object getProxy(){
+        return Proxy.newProxyInstance(targe.getClass().getClassLoader(), targe.getClass().getInterfaces(), new InvocationHandler() {
             @Override
             public Object invoke(Object o, Method method, Object[] objects) throws Throwable {
                 advice.before(method);
-                Object invoke = method.invoke(targe, objects);
+                Object returnVal = method.invoke(targe,objects);
                 advice.after(method);
-                return invoke;
+                return returnVal;
             }
         });
-    }
-
+  }
 }
+/*
+*  public Object getProxy(){
+        return Proxy.newProxyInstance(targe.getClass().getClassLoader(), targe.getClass().getInterfaces(), new InvocationHandler() {
+            @Override
+            public Object invoke(Object o, Method method, Object[] objects) throws Throwable {
+                advice.before(method);
+                Object object =method.invoke(targe,objects);
+                advice.after(method);
+                return object;
+            }
+        });
+   }
+*/

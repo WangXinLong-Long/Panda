@@ -186,12 +186,12 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends RxAppCom
             getSupportActionBar().setTitle(resId);
         }
         if (onClickListener == null) {
-            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+           /* toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     finish();
                 }
-            });
+            });*/
         } else {
             toolbar.setNavigationOnClickListener(onClickListener);
         }

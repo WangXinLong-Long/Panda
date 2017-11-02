@@ -13,6 +13,7 @@ import com.panda.mvp.presenter.login.SplashActivityPresenter;
 import com.panda.mvp.ui.conversation.VideoCallActivity;
 import com.panda.mvp.ui.conversation.VoiceCallActivity;
 import com.panda.mvp.ui.main.MainActivity;
+import com.panda.mvp.ui.test.TestActivity;
 import com.panda.pandalibs.PandaHelper;
 import com.panda.pandalibs.base.mvp.ui.BaseActivity;
 
@@ -81,7 +82,7 @@ public class SplashActivityActivity extends BaseActivity<SplashActivityPresenter
                     Thread.sleep(sleepTime);
                 } catch (InterruptedException e) {
                 }
-                startActivity(new Intent(SplashActivityActivity.this, LoginActivityActivity.class));
+                startActivity(new Intent(SplashActivityActivity.this, TestActivity.class));
                 finish();
             }
         }).start();

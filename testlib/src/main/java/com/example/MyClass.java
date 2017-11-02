@@ -9,9 +9,33 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MyClass {
     public static void main(String[] args) throws IOException {
+//        "unionid"       -> "oKpPW01RPpzuJpD1T4u1aY2d8WvY"
+//        "scope"         -> "snsapi_base,snsapi_userinfo,"
+//        "expires_in"    -> "7200"
+//        "access_token"  -> "56FmhHZCWGR55CQYBmG9QOvgHDLPi_as00yP1WE7Qh7JWz8TZTbS5nTwwevCwJ4teppFM4Lprhaapk3tKlPfeH7lezgr8P-i3InncdGUBQo"
+//        "refresh_token" -> "_YSYNJcJoWcMqk9ix1fnsgfP-zy963Pea_3K7HdM1hH5OGmVIMKO23lHQxW88XC-oTnOO-_F_h119A0qca6MUUleJEZu6mm9SGOJZGtosVQ"
+//        "openid"        -> "o11TYww_rCgB_fSLHc8GFQjVkBlk"
+
+        HashMap<String, String> data = new HashMap<>();
+        data.put("unionid", "oKpPW01RPpzuJpD1T4u1aY2d8WvY");
+        data.put("scope", "snsapi_base,snsapi_userinfo,");
+        data.put("expires_in", "7200");
+        data.put("access_token", "56FmhHZCWGR55CQYBmG9QOvgHDLPi_as00yP1WE7Qh7JWz8TZTbS5nTwwevCwJ4teppFM4Lprhaapk3tKlPfeH7lezgr8P-i3InncdGUBQo");
+        data.put("refresh_token", "_YSYNJcJoWcMqk9ix1fnsgfP-zy963Pea_3K7HdM1hH5OGmVIMKO23lHQxW88XC-oTnOO-_F_h119A0qca6MUUleJEZu6mm9SGOJZGtosVQ");
+        data.put("openid", "o11TYww_rCgB_fSLHc8GFQjVkBlk");
+
+        ThirdPartBody thirdPartBody = new ThirdPartBody();
+        thirdPartBody.setUnionid(data.get("unionid"));
+        thirdPartBody.setScope(data.get("scope"));
+        thirdPartBody.setExpires_in(data.get("expires_in"));
+        thirdPartBody.setAccess_token(data.get("access_token"));
+        thirdPartBody.setRefresh_token(data.get("refresh_token"));
+        thirdPartBody.setOpenid(data.get("openid"));
+        System.out.println(thirdPartBody.toString());
         writeToFile();
         readFromFile();
     }
