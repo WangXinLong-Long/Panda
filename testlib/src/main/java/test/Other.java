@@ -8,6 +8,7 @@ import com.example.ProxyBean;
  * @date on 2017/10/26.
  */
 //other
+//master
 public class Other {
     ProxyBean proxyBean;
     MyAdvice advice;
