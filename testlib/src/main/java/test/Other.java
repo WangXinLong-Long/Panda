@@ -13,4 +13,5 @@ public class Other {
     ProxyBean proxyBean;
     MyAdvice advice;
     String dev;
+    String master;
 }
