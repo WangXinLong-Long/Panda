@@ -13,4 +13,5 @@ public class Other {
     MyAdvice advice;
     String master;
     //DEVELOP ME 注释
+//    Master分支上就干事情
 }
