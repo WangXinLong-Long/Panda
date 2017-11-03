@@ -12,4 +12,5 @@ import com.example.ProxyBean;
 public class Other {
     ProxyBean proxyBean;
     MyAdvice advice;
+    String dev;
 }
