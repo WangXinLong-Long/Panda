@@ -4,7 +4,6 @@ import jdk.nashorn.internal.objects.Global.println
  * @author wxl
  * @date  on 2017/10/27.
  */
-//dev
 //master
 class Runoob {
     //TODO:Kotlin的主函数在哪里

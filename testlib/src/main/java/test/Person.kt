@@ -4,7 +4,6 @@ package test
  * @author wxl
  * @date  on 2017/11/2.
  */
-//develop
 //master
 class Person{
     var lastName:String="zhang"
