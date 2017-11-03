@@ -4,8 +4,7 @@ package test
  * @author wxl
  * @date  on 2017/11/2.
  */
-//master
-//other
+//dev
 class Person{
     var lastName:String="zhang"
     get() { return field.toUpperCase() }
