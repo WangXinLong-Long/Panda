@@ -18,5 +18,6 @@ class Runoob {
         print("hao")
     }
 
+    //哥们新添加了一行注释，指针就向前了
 }
 
