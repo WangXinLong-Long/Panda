@@ -12,4 +12,5 @@ public class Other {
     ProxyBean proxyBean;
     MyAdvice advice;
     String master;
+//    Master分支上就干事情
 }
