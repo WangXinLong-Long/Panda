@@ -5,6 +5,7 @@ package test
  * @date  on 2017/11/2.
  */
 //master
+//other
 class Person{
     var lastName:String="zhang"
     get() { return field.toUpperCase() }
