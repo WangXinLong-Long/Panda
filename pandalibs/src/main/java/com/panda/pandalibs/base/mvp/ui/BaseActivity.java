@@ -149,12 +149,12 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends RxAppCom
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         if (clickListener == null) {
-            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    finish();
-                }
-            });
+//            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    finish();
+//                }
+//            });
 
         } else {
             toolbar.setNavigationOnClickListener(clickListener);
@@ -168,12 +168,12 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends RxAppCom
             getSupportActionBar().setTitle(title);
         }
         if (onClickListener == null) {
-            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    finish();
-                }
-            });
+//            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    finish();
+//                }
+//            });
         } else {
             toolbar.setNavigationOnClickListener(onClickListener);
         }
@@ -186,12 +186,12 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends RxAppCom
             getSupportActionBar().setTitle(resId);
         }
         if (onClickListener == null) {
-           /* toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    finish();
-                }
-            });*/
+//            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    finish();
+//                }
+//            });
         } else {
             toolbar.setNavigationOnClickListener(onClickListener);
         }

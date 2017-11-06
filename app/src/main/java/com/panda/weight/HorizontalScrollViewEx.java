@@ -15,6 +15,167 @@ import android.widget.Scroller;
 
 public class HorizontalScrollViewEx extends ViewGroup {
 
+
+    private Scroller mScroller;
+    private VelocityTracker mVelocityTracker;
+
+    private int mLastY;
+    private int mLastX;
+    private int mInterceptX;
+    private int mInterceptY;
+
+    private int mChildIndex = 0;
+    private int mChildCount;
+    private int mChildWidth;
+
+    private int measuedWidth;
+    private int measuedHeight;
+
+
+    public HorizontalScrollViewEx(Context context) {
+        super(context);
+        init();
+    }
+
+    private void init() {
+        mScroller = new Scroller(getContext());
+        mVelocityTracker = VelocityTracker.obtain();
+    }
+
+    public HorizontalScrollViewEx(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init();
+    }
+
+    public HorizontalScrollViewEx(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init();
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent event) {
+        boolean intercepted = true;
+        int x = (int) event.getX();
+        int y = (int) event.getY();
+        int action = event.getAction();
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                intercepted = false;
+                if (!mScroller.isFinished()) {
+                    mScroller.abortAnimation();
+                    intercepted = true;
+                }
+                break;
+
+            case MotionEvent.ACTION_MOVE:
+                int deltaX = x - mInterceptX;
+                int deltaY = y - mInterceptY;
+                if (Math.abs(deltaX)>Math.abs(deltaY)){
+                    intercepted = true;
+                }else {
+                    intercepted = false;
+                }
+                break;
+
+            case MotionEvent.ACTION_UP:
+                intercepted = false;
+                break;
+            default:
+                break;
+        }
+        mLastX = x;
+        mLastY = y;
+        mInterceptX = x;
+        mInterceptY = y;
+        return super.onInterceptTouchEvent(event);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        mVelocityTracker.addMovement(event);
+        int x = (int) event.getX();
+        int y = (int) event.getY();
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                if (!mScroller.isFinished()) {
+                    mScroller.abortAnimation();
+                }
+                break;
+
+            case MotionEvent.ACTION_MOVE:
+                int deltaX = x - mLastX;
+                int deltaY = y - mLastY;
+                scrollTo(deltaX,0);
+                break;
+
+            case MotionEvent.ACTION_UP:
+                int scrollX = getScrollX();
+                mVelocityTracker.computeCurrentVelocity(1000);
+                int xVelocity = ((int) mVelocityTracker.getXVelocity());
+                if (Math.abs(xVelocity)>=50){
+                    mChildIndex = mChildIndex>0?xVelocity-1:xVelocity+1;
+                }else {
+                    mChildIndex = (scrollX + mChildWidth / 2) / mChildIndex;
+                    int dx = mChildIndex * mChildWidth - scrollX;
+                    smoothScrollTo(dx,0);
+                    mVelocityTracker.clear();
+                }
+                break;
+            default:
+                break;
+        }
+        mLastX = x;
+        mLastY = y;
+        return true;
+    }
+
+    private void smoothScrollTo(int dx, int dy) {
+        mScroller.startScroll(getScrollX(),0,dx,dy);
+        invalidate();
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        int childCount = getChildCount();
+        measureChildren(widthMeasureSpec,heightMeasureSpec);
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+        int widthSize = MeasureSpec.getSize(widthMeasureSpec);
+        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
+        if (childCount == 0){
+            setMeasuredDimension(0,0);
+        }else if (heightMode == MeasureSpec.AT_MOST){
+            View childAt = getChildAt(0);
+            measuedHeight = childAt.getMeasuredHeight();
+            setMeasuredDimension(widthSize,measuedHeight);
+        }else if (widthMode == MeasureSpec.AT_MOST){
+            View childAt = getChildAt(0);
+            measuedWidth = childAt.getMeasuredWidth()*childCount;
+            setMeasuredDimension(measuedWidth,heightSize);
+        }else {
+            View childAt = getChildAt(0);
+            measuedWidth = childAt.getMeasuredWidth()*childCount;
+             measuedHeight = childAt.getMeasuredHeight();
+            setMeasuredDimension(measuedWidth,measuedHeight);
+        }
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        int childLeft = 0;
+        int childCount = getChildCount();
+        mChildCount = childCount;
+        for (int i = 0; i < mChildCount; i++) {
+            View childAt = getChildAt(i);
+            mChildWidth = childAt.getMeasuredWidth();
+            childAt.layout(childLeft,0,childLeft+mChildWidth,childAt.getMeasuredHeight());
+            childLeft+=mChildWidth;
+        }
+    }
+}
+/*
+
     private Scroller mScroller;
     private VelocityTracker mVelocityTracker;
 
@@ -181,4 +342,4 @@ public class HorizontalScrollViewEx extends ViewGroup {
             childLeft += childViewMeasuredWidth;
         }
     }
-}
+ */
