@@ -144,7 +144,7 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
         Intent intent = new Intent(this, TestActivity.class);
         startActivity(intent);
     }
-
+// dev3
     public void internalInterception(View view) {
         Intent intent= new Intent(this, InternalInterceptionActivity.class);
         startActivity(intent);
