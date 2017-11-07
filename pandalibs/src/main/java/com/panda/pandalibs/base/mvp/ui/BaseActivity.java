@@ -88,7 +88,7 @@ public abstract class BaseActivity<P extends BasePresenterImpl> extends RxAppCom
 
             }
         } else {
-            android4Adapter();
+//            android4Adapter();
         }
 
         if (mIsNeedGoneNavigationBar) {

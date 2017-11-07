@@ -87,7 +87,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
         mLastY = y;
         mInterceptX = x;
         mInterceptY = y;
-        return super.onInterceptTouchEvent(event);
+        return intercepted;
     }
 
     @Override
@@ -105,21 +105,36 @@ public class HorizontalScrollViewEx extends ViewGroup {
             case MotionEvent.ACTION_MOVE:
                 int deltaX = x - mLastX;
                 int deltaY = y - mLastY;
-                scrollTo(deltaX,0);
+                scrollBy(-deltaX,0);
                 break;
+/*
+ int scrollX = getScrollX();
+                mVelocityTracker.computeCurrentVelocity(1000);
+                float xVelocity = mVelocityTracker.getXVelocity();
+                if (Math.abs(xVelocity) >= 50) {
+                    mChildIndex = xVelocity > 0 ? mChildIndex - 1 : mChildIndex + 1;
+                } else {
+                    mChildIndex = (scrollX + mChildWidth / 2) / mChildWidth;
+                }
+                mChildIndex = Math.min(Math.max(0, mChildIndex), mChildCount);
+                int dx = mChildIndex * mChildWidth - scrollX;
+                smoothScrollTo(dx, 0);
+                mVelocityTracker.clear();
 
+*/
             case MotionEvent.ACTION_UP:
                 int scrollX = getScrollX();
                 mVelocityTracker.computeCurrentVelocity(1000);
-                int xVelocity = ((int) mVelocityTracker.getXVelocity());
-                if (Math.abs(xVelocity)>=50){
-                    mChildIndex = mChildIndex>0?xVelocity-1:xVelocity+1;
+                float xVelocity =  mVelocityTracker.getXVelocity();
+                if (Math.abs(xVelocity) >= 50){
+                    mChildIndex = xVelocity>0?mChildIndex-1:mChildIndex+1;
                 }else {
-                    mChildIndex = (scrollX + mChildWidth / 2) / mChildIndex;
-                    int dx = mChildIndex * mChildWidth - scrollX;
-                    smoothScrollTo(dx,0);
-                    mVelocityTracker.clear();
+                    mChildIndex = (scrollX + mChildWidth / 2) / mChildWidth;
                 }
+                mChildIndex = Math.min(Math.max(0,mChildIndex),mChildCount);
+                int dx = mChildIndex * mChildWidth - scrollX;
+                smoothScrollTo(dx,0);
+                mVelocityTracker.clear();
                 break;
             default:
                 break;
@@ -171,6 +186,14 @@ public class HorizontalScrollViewEx extends ViewGroup {
             mChildWidth = childAt.getMeasuredWidth();
             childAt.layout(childLeft,0,childLeft+mChildWidth,childAt.getMeasuredHeight());
             childLeft+=mChildWidth;
+        }
+    }
+
+    @Override
+    public void computeScroll() {
+        if (mScroller.computeScrollOffset()){
+            scrollTo(mScroller.getCurrX(),mScroller.getCurrY());
+            postInvalidate();
         }
     }
 }
