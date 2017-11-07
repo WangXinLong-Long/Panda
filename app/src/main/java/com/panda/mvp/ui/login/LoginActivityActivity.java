@@ -148,6 +148,5 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
     public void internalInterception(View view) {
         Intent intent= new Intent(this, InternalInterceptionActivity.class);
         startActivity(intent);
-        //开玩笑
     }
 }
