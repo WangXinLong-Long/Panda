@@ -144,6 +144,10 @@
         <activity
             android:name=".mvp.ui.test.InternalInterceptionActivity"
             android:screenOrientation="portrait" />
+        <!-- DEMO TITLE -->
+        <activity
+            android:name=".mvp.ui.login.SwipeRefreshDemoActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

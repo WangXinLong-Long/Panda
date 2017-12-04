@@ -53,12 +53,23 @@
             android:layout_toRightOf="@id/regist"
             android:onClick="test"
             android:text="test" />
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="内部拦截"
-    android:onClick="internalInterception"
-    />
+
+        <Button
+            android:id="@+id/interception"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="internalInterception"
+            android:layout_below="@id/test"
+            android:text="内部拦截" />
+
+        <Button
+            android:layout_below="@id/test"
+            android:layout_toRightOf="@id/interception"
+            android:id="@+id/turn_swipe_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="swipeRefresh"
+            android:text="swipe_refresh" />
 
     </RelativeLayout>
 
