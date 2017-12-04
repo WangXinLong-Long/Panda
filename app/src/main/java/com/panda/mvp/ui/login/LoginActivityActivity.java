@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.panda.R;
 import com.panda.mvp.contract.login.LoginActivityContract;
 import com.panda.mvp.presenter.login.LoginActivityPresenter;
+import com.panda.mvp.ui.test.InternalInterceptionActivity;
 import com.panda.mvp.ui.test.TestActivity;
 import com.panda.pandalibs.base.mvp.ui.BaseActivity;
 import com.panda.pandalibs.utils.net.NetUtils;
@@ -72,7 +73,7 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
         return new LoginActivityPresenter(this, this);
     }
 
-    @OnClick({R.id.login, R.id.regist})
+    @OnClick({R.id.login, R.id.regist, R.id.test})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.login: {
@@ -83,6 +84,10 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
                 startActivityForResult(new Intent(this, RegisterActivity.class), 0);
             }
             break;
+            case R.id.test: {
+                Intent intent = new Intent(this, TestActivity.class);
+                startActivity(intent);
+            }
             default:
                 break;
         }
@@ -134,4 +139,20 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
     }
 
     private static final String TAG = "LoginActivityActivity";
+
+    public void test(View view) {
+        Intent intent = new Intent(this, TestActivity.class);
+        startActivity(intent);
+    }
+
+    // dev3
+    public void internalInterception(View view) {
+        Intent intent = new Intent(this, InternalInterceptionActivity.class);
+        startActivity(intent);
+    }
+
+    public void swipeRefresh(View view) {
+        Intent intent = new Intent(this, SwipeRefreshDemoActivity.class);
+        startActivity(intent);
+    }
 }

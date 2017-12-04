@@ -116,4 +116,5 @@ dependencies {
     compile 'org.glassfish:javax.annotation:10.0-b28'
 
     compile project(':pandalibs')
+    compile'com.zt.maven.widget:refreshview:1.0.2'
 }
