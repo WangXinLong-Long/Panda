@@ -82,7 +82,7 @@ public class SplashActivityActivity extends BaseActivity<SplashActivityPresenter
                     Thread.sleep(sleepTime);
                 } catch (InterruptedException e) {
                 }
-                startActivity(new Intent(SplashActivityActivity.this, TestActivity.class));
+                startActivity(new Intent(SplashActivityActivity.this, LoginActivityActivity.class));
                 finish();
             }
         }).start();

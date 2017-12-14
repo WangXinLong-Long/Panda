@@ -35,7 +35,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/password"
-            android:layout_centerHorizontal="true"
             android:text="登录" />
 
         <Button
@@ -52,8 +51,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/password"
             android:layout_toRightOf="@id/regist"
+            android:onClick="test"
             android:text="test" />
-
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="内部拦截"
+    android:onClick="internalInterception"
+    />
 
     </RelativeLayout>
 

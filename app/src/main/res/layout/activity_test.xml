@@ -20,10 +20,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-           <!-- <com.panda.weight.HorizontalScrollViewEx
+            <com.panda.weight.HorizontalScrollViewEx
                 android:id="@+id/container"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" />-->
+                android:layout_height="match_parent" />
             <com.panda.weight.ScrollViewCustom
                 android:id="@+id/scroll_view"
                 android:layout_width="match_parent"
