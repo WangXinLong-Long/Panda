@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">aidlService</string>
+    <string name="remote_service_unattached">未绑定</string>
+    <string name="remote_service_connected">remote_service_connected</string>
+    <string name="remote_service_disconnected">remote_service_disconnected</string>
+    <string name="bind">bind</string>
+    <string name="unbind">unbind</string>
+    <string name="kill_success">kill_success</string>
+    <string name="kill_failed">kill_failed</string>
 </resources>

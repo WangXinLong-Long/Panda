@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aidlservice.ClientActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/callback_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="callback_text" />
+
+        <Button
+            android:id="@+id/bind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/callback_text"
+            android:onClick="clickHandler"
+            android:text="绑定" />
+
+        <Button
+            android:id="@+id/unbind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/callback_text"
+            android:layout_toRightOf="@id/bind"
+            android:onClick="clickHandler"
+            android:text="解除绑定" />
+
+        <Button
+            android:id="@+id/kill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/callback_text"
+            android:layout_toRightOf="@id/unbind"
+            android:onClick="clickHandler"
+            android:text="杀死进程" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

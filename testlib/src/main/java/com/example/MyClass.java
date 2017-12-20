@@ -59,13 +59,12 @@ public class MyClass {
                 System.out.print("." + ch);
 
                 if ((ch == 4) && !marked) {
-                    // 在4的地方标记位置
                     inputStream.mark(6);
                     marked = true;
                 }
 
                 if (ch == 8 && count < 2) {
-                    // 重设位置到4
+
                     inputStream.reset();
                     count++;
                 }
@@ -88,7 +87,6 @@ public class MyClass {
             byte[] b = new byte[20];
             for (int i = 0; i < 20; i++)
                 b[i] = (byte) i;
-            // 写入从0到19的20个字节到文件中
             output.write(b);
         } catch (IOException e) {
             e.printStackTrace();

@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.aidlservice">
 
+    <permission
+        android:name="bookservice.permission"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="bookservice.permission.provider"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="bookservice.permission" />
+    <uses-permission android:name="bookservice.permission.provider" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,6 +23,36 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.example.messager.MessagerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity android:name="com.example.messager.MessageActivity" />
+
+        <service
+            android:name=".BookManagerService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="bookservice.permission"
+            android:process=":remote" />
+
+        <provider
+            android:name="com.example.contentProvider.BookProvider"
+            android:authorities="com.ryg.chapter_2.book.provider"
+            android:permission="bookservice.permission.provider"
+            android:process=":provider"
+            ></provider>
+
+        <activity android:name="com.example.contentProvider.PropertiesActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category._LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

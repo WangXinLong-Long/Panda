@@ -10,8 +10,9 @@ import java.util.Properties;
  */
 
 public class BeanFactory {
-   Properties properties = new Properties();
+    Properties properties ;
    public BeanFactory(InputStream is){
+       properties    = new Properties();
        try {
            properties.load(is);
        } catch (IOException e) {
@@ -32,7 +33,7 @@ public class BeanFactory {
           String targetStr = properties.getProperty(key+".target");
           try {
               Advice adviceIns = ((Advice) Class.forName(adviceStr).newInstance());
-              Object targetIns = (Class.forName(adviceStr).newInstance());
+              Object targetIns = (Class.forName(targetStr).newInstance());
               ProxyFactoryBean proxyFactoryBean = new ProxyFactoryBean();
               proxyFactoryBean.setAdvice(adviceIns);
               proxyFactoryBean.setTarge(targetIns);
