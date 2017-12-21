@@ -31,7 +31,9 @@ public class PropertiesActivity extends AppCompatActivity {
 //        getContentResolver().query(uri,null,null,null,null);
 //        getContentResolver().query(uri,null,null,null,null);
 //        getContentResolver().query(uri,null,null,null,null);
-
+/**
+ *
+ */
         Uri bookUri = Uri.parse("content://com.ryg.chapter_2.book.provider/book");
         ContentValues contentValues = new ContentValues();
         contentValues.put("_id", 6);
@@ -59,5 +61,6 @@ public class PropertiesActivity extends AppCompatActivity {
             Log.i(TAG, "query user: " + user.toString());
         }
         userCursor.close();
+
     }
 }
