@@ -53,12 +53,22 @@
             android:layout_toRightOf="@id/regist"
             android:onClick="test"
             android:text="test" />
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="内部拦截"
-    android:onClick="internalInterception"
-    />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_toEndOf="@id/test"
+            android:onClick="internalInterception"
+            android:text="内部拦截"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login"
+            android:onClick="jumpDragView"
+            android:text="@string/drag_view"
+            />
 
     </RelativeLayout>
 

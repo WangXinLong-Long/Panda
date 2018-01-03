@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.panda.R;
 import com.panda.mvp.contract.login.LoginActivityContract;
 import com.panda.mvp.presenter.login.LoginActivityPresenter;
+import com.panda.mvp.ui.test.DragViewActivity;
 import com.panda.mvp.ui.test.InternalInterceptionActivity;
 import com.panda.mvp.ui.test.TestActivity;
 import com.panda.pandalibs.base.mvp.ui.BaseActivity;
@@ -147,6 +148,11 @@ public class LoginActivityActivity extends BaseActivity<LoginActivityPresenter> 
 // dev3
     public void internalInterception(View view) {
         Intent intent= new Intent(this, InternalInterceptionActivity.class);
+        startActivity(intent);
+    }
+
+    public void jumpDragView(View view) {
+        Intent intent = new Intent(this,DragViewActivity.class);
         startActivity(intent);
     }
 }

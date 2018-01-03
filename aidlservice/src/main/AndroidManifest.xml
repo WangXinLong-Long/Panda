@@ -8,6 +8,7 @@
     <permission
         android:name="bookservice.permission.provider"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="bookservice.permission" />
     <uses-permission android:name="bookservice.permission.provider" />
 
@@ -45,8 +46,7 @@
             android:name="com.example.contentProvider.BookProvider"
             android:authorities="com.ryg.chapter_2.book.provider"
             android:permission="bookservice.permission.provider"
-            android:process=":provider"
-            ></provider>
+            android:process=":provider" />
 
         <activity android:name="com.example.contentProvider.PropertiesActivity">
             <intent-filter>
@@ -55,6 +55,11 @@
                 <category android:name="android.intent.category._LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name="com.example.socket.TCPServerService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

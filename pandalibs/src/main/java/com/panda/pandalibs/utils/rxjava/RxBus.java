@@ -62,7 +62,7 @@ public class RxBus {
     public <T> Observable<T> register(@NonNull Object tag, @NonNull Class<T> clazz) {
         List<Subject> subjectList = subjectMapper.get(tag);
         if (null == subjectList) {
-            subjectList = Collections.synchronizedList(new ArrayList<>());
+            subjectList = Collections.synchronizedList(new ArrayList<Subject>());
             subjectMapper.put(tag, subjectList);
         }
 

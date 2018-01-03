@@ -77,7 +77,7 @@ public class NetUtils {
         NET_UNKNOWN//未知
     }
 
-    public static void netWorkListener(Context context, NetCallback callback) {
+    public static void netWorkListener(Context context, final NetCallback callback) {
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP && !Build.MANUFACTURER.contains("360")) {
             try {
                 ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

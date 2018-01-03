@@ -144,6 +144,7 @@
         <activity
             android:name=".mvp.ui.test.InternalInterceptionActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".mvp.ui.test.DragViewActivity"></activity>
     </application>
 
 </manifest>
